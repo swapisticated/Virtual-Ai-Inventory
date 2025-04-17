@@ -4,6 +4,7 @@ import "./globals.css";
 import {ThemeInitializer} from "./themeInit";
 import {FloatingNav} from "@/components/ui/floating-navbar";
 import { Home, Info, Phone } from "lucide-react";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

@@ -13,6 +13,8 @@ export default function Dashboard() {
 //     fetchSections();
 //   }, []);
 
+
+
   const fetchSections = async () => {
     try {
       const response = await fetch('/api/sections');
