@@ -28,6 +28,15 @@ export default function Login() {
               Continue with Google
             </button>    </form>
 
+          <form
+            action={async () => {
+              "use server"
+              await signIn("github", { redirectTo: "/dashboard" })
+            }}
+          >
+            <button type="submit" className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-[#5f5ef6] text-white hover:bg-[#4f4ef3] transition">
+              Continue with Github
+            </button>    </form>
 
           <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition">
             <Mail className="text-lg" />
