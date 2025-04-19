@@ -84,7 +84,7 @@ export const FloatingNav = ({
         
       >
         {navItems.map((navItem: any, idx: number) => (
-          <Link
+          <Link  prefetch={true}
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
@@ -108,6 +108,7 @@ export const FloatingNav = ({
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button>
         </Link>
+        
         {/* <DarkModeToggle /> */}
 
       </motion.div>

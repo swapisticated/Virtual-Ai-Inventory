@@ -20,8 +20,7 @@ export default function Template({
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.75 }}
-      // style={{ overflow: "hidden" }} // 👈 Prevents scroll during animation
+      transition={{ ease: "easeInOut", duration: 0.2 }}
     >
       {children}
     </motion.div>
