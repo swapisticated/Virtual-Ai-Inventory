@@ -1,4 +1,6 @@
-
+  // "prisma": {
+  //   "seed": "node prisma/seed.js"
+  // },
 
 // prisma/seed.js
 const { PrismaClient } = require('../app/generated/prisma'); // Adjust path as needed

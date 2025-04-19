@@ -1,10 +1,11 @@
 // app/login/page.tsx
-"use client";
 import React from "react";
 import { Mail } from "lucide-react";
 import Link from "next/link";
+import { signIn } from "@/auth"
 
-export default function Login() {
+
+export default function Login() {2
   return (
     <div className="h-screen flex items-center justify-center bg-black text-white">
       <div className="w-full max-w-sm space-y-6 text-center px-6">
@@ -17,9 +18,16 @@ export default function Login() {
 
         {/* Login Buttons */}
         <div className="space-y-4">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-[#5f5ef6] text-white hover:bg-[#4f4ef3] transition">
-            Continue with Google
-          </button>
+          <form
+            action={async () => {
+              "use server"
+              await signIn("google")
+            }}
+          >
+            <button type="submit" className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-[#5f5ef6] text-white hover:bg-[#4f4ef3] transition">
+              Continue with Google
+            </button>    </form>
+
 
           <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition">
             <Mail className="text-lg" />
