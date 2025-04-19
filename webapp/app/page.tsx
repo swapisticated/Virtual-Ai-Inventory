@@ -1,9 +1,9 @@
 import React from 'react'
-import  HomePage from "./home/page"
+import LandingPage from "./home/page"
 
 const home = () => {
   return (
-    <HomePage/>
+    <LandingPage/>
   )
 }
 
