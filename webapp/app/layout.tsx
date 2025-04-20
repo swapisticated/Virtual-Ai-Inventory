@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {ThemeInitializer} from "./themeInit";
-import {FloatingNav} from "@/components/ui/floating-navbar";
+import { ThemeInitializer } from "./themeInit";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Home, Info, Phone } from "lucide-react";
+import { SessionProvider } from "next-auth/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,11 +49,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SessionProvider>
 
-        <ThemeInitializer />
-        <FloatingNav navItems={navItems} />
-        {/* <Navbar /> */}
-        {children}
+
+          <ThemeInitializer />
+          <FloatingNav navItems={navItems} />
+          {/* <Navbar /> */}
+          {children}
+        </SessionProvider>
+
       </body>
     </html>
   );

@@ -3,51 +3,55 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { redirect } from 'next/navigation';
+import { useSession } from "next-auth/react"
+import { SessionProvider } from "next-auth/react"
+// import { useRouter } from "next/navigation";
+import CreateSectionModal from '@/components/CreateSectionModal';
 
 export default function Dashboard() {
   const [sections, setSections] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-//   useEffect(() => {
-//     fetchSections();
-//   }, []);
+  useEffect(() => {
+    const fetchSections = async () => {
+      try {
+        const res = await fetch('/api/sections');
+        if (!res.ok) throw new Error('Failed to fetch sections');
+        const data = await res.json();
+        setSections(data);
+      } catch (err) {
+        console.error(err);
+        setSections([]); // fallback
+      }
+    };
+  
+    fetchSections();
+  }, []);
 
+  
+const handleCreateSection = (newSection) => {
+  setSections([newSection, ...sections]);
+};
 
+  //   if (isLoading) {
+  //     return (
+  //       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
+  //         <div className="flex flex-col items-center gap-4">
+  //           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+  //           <p className="text-gray-400 text-lg font-medium">Loading sections...</p>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
 
-  const fetchSections = async () => {
-    try {
-      const response = await fetch('/api/sections');
-      if (!response.ok) throw new Error('Failed to fetch sections');
-      const data = await response.json();
-      setSections(data);
-    } catch (error) {
-      console.error('Error fetching sections:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleCreateSection = (newSection) => {
-    setSections([...sections, newSection]);
-  };
-
-//   if (isLoading) {
-//     return (
-//       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
-//         <div className="flex flex-col items-center gap-4">
-//           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-//           <p className="text-gray-400 text-lg font-medium">Loading sections...</p>
-//         </div>
-//       </div>
-//     );
-//   }
 
   return (
-    <div className="h-[200vh] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
@@ -57,13 +61,13 @@ export default function Dashboard() {
               Inventory Dashboard
             </h1>
             <button
-            //   onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsModalOpen(true)}
               className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-blue-500/25"
             >
               Create New Section
             </button>
           </div>
-          
+
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
@@ -95,7 +99,7 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link 
+                  <Link
                     href={`/sections/${section.id}`}
                     className="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300"
                   >
@@ -128,7 +132,7 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Link 
+                  <Link
                     href={`/sections/${section.id}`}
                     className="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300"
                   >
@@ -148,12 +152,12 @@ export default function Dashboard() {
           </div>
         </motion.div>
       </div>
-{/* 
+      
       <CreateSectionModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleCreateSection}
-      /> */}
+      />
     </div>
   );
 }

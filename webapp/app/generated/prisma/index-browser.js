@@ -134,10 +134,10 @@ exports.Prisma.AccountScalarFieldEnum = {
 };
 
 exports.Prisma.SessionScalarFieldEnum = {
-  id: 'id',
   sessionToken: 'sessionToken',
   userId: 'userId',
-  expires: 'expires'
+  expires: 'expires',
+  id: 'id'
 };
 
 exports.Prisma.VerificationTokenScalarFieldEnum = {
@@ -149,7 +149,8 @@ exports.Prisma.VerificationTokenScalarFieldEnum = {
 exports.Prisma.OrganizationScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  organizationCode: 'organizationCode'
 };
 
 exports.Prisma.InventorySectionScalarFieldEnum = {
@@ -176,14 +177,14 @@ exports.Prisma.InventoryItemScalarFieldEnum = {
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   email: 'email',
-  emailVerified: 'emailVerified',
   name: 'name',
-  password: 'password',
-  image: 'image',
-  role: 'role',
   organizationId: 'organizationId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  password: 'password',
+  role: 'role',
+  emailVerified: 'emailVerified',
+  image: 'image',
+  updatedAt: 'updatedAt',
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.AuditLogScalarFieldEnum = {

@@ -36,7 +36,7 @@
     "app/templatapp/dashboard/layout.rsxyout.rsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-, "lib/prisma.js"  ],
+, "lib/prisma.js", "app/dashboard/Dashboard.js"  ],
   "exclude": [
     "node_modules"
   ]

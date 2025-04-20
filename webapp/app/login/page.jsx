@@ -2,7 +2,13 @@
 import React from "react";
 import { Mail } from "lucide-react";
 import Link from "next/link";
-import { signIn } from "@/auth"
+import { signIn, signOut } from "@/auth"
+import {
+  IconBrandGithub,
+  IconBrandGoogle,
+  IconBrandOnlyfans,
+} from "@tabler/icons-react";
+
 
 
 export default function Login() {
@@ -24,7 +30,10 @@ export default function Login() {
               await signIn("google", { redirectTo: "/dashboard" })
             }}
           >
+
             <button type="submit" className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-[#5f5ef6] text-white hover:bg-[#4f4ef3] transition">
+              <IconBrandGoogle className="h-6 w-6 text-neutral-800 dark:text-neutral-300" />
+
               Continue with Google
             </button>    </form>
 
@@ -35,19 +44,24 @@ export default function Login() {
             }}
           >
             <button type="submit" className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-[#5f5ef6] text-white hover:bg-[#4f4ef3] transition">
+              <IconBrandGithub className="h-6 w-6 text-neutral-800 dark:text-neutral-300" />
+
               Continue with Github
             </button>    </form>
 
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition">
+          <form
+            action={async () => {
+              "use server"
+              await signOut()
+            }}
+          >
+              <button type="submit" className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-medium bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition">
             <Mail className="text-lg" />
-            Continue with Email
+            Signout
           </button>
+          </form>
+      
         </div>
-
-        {/* Subtle Note
-        <p className="text-xs text-zinc-500 leading-snug">
-          Secure, fast and reliable access to your account
-        </p> */}
 
         {/* Footer */}
         <p className="text-xs text-zinc-500">

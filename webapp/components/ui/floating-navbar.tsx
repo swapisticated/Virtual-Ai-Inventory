@@ -113,6 +113,7 @@ export const FloatingNav = ({
 
       </motion.div>
       )}
+      
     </AnimatePresence>
   );
 };

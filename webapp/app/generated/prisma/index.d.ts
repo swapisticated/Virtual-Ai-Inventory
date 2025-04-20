@@ -1643,14 +1643,14 @@ export namespace Prisma {
    */
 
   export type OrganizationCountOutputType = {
-    sections: number
     items: number
+    sections: number
     users: number
   }
 
   export type OrganizationCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    sections?: boolean | OrganizationCountOutputTypeCountSectionsArgs
     items?: boolean | OrganizationCountOutputTypeCountItemsArgs
+    sections?: boolean | OrganizationCountOutputTypeCountSectionsArgs
     users?: boolean | OrganizationCountOutputTypeCountUsersArgs
   }
 
@@ -1668,15 +1668,15 @@ export namespace Prisma {
   /**
    * OrganizationCountOutputType without action
    */
-  export type OrganizationCountOutputTypeCountSectionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventorySectionWhereInput
+  export type OrganizationCountOutputTypeCountItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventoryItemWhereInput
   }
 
   /**
    * OrganizationCountOutputType without action
    */
-  export type OrganizationCountOutputTypeCountItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventoryItemWhereInput
+  export type OrganizationCountOutputTypeCountSectionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventorySectionWhereInput
   }
 
   /**
@@ -1692,13 +1692,13 @@ export namespace Prisma {
    */
 
   export type InventorySectionCountOutputType = {
-    children: number
     items: number
+    children: number
   }
 
   export type InventorySectionCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    children?: boolean | InventorySectionCountOutputTypeCountChildrenArgs
     items?: boolean | InventorySectionCountOutputTypeCountItemsArgs
+    children?: boolean | InventorySectionCountOutputTypeCountChildrenArgs
   }
 
   // Custom InputTypes
@@ -1715,15 +1715,15 @@ export namespace Prisma {
   /**
    * InventorySectionCountOutputType without action
    */
-  export type InventorySectionCountOutputTypeCountChildrenArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventorySectionWhereInput
+  export type InventorySectionCountOutputTypeCountItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventoryItemWhereInput
   }
 
   /**
    * InventorySectionCountOutputType without action
    */
-  export type InventorySectionCountOutputTypeCountItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventoryItemWhereInput
+  export type InventorySectionCountOutputTypeCountChildrenArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventorySectionWhereInput
   }
 
 
@@ -1772,14 +1772,14 @@ export namespace Prisma {
    */
 
   export type UserCountOutputType = {
-    createdItems: number
     accounts: number
+    createdItems: number
     sessions: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    createdItems?: boolean | UserCountOutputTypeCountCreatedItemsArgs
     accounts?: boolean | UserCountOutputTypeCountAccountsArgs
+    createdItems?: boolean | UserCountOutputTypeCountCreatedItemsArgs
     sessions?: boolean | UserCountOutputTypeCountSessionsArgs
   }
 
@@ -1797,15 +1797,15 @@ export namespace Prisma {
   /**
    * UserCountOutputType without action
    */
-  export type UserCountOutputTypeCountCreatedItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventoryItemWhereInput
+  export type UserCountOutputTypeCountAccountsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AccountWhereInput
   }
 
   /**
    * UserCountOutputType without action
    */
-  export type UserCountOutputTypeCountAccountsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AccountWhereInput
+  export type UserCountOutputTypeCountCreatedItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventoryItemWhereInput
   }
 
   /**
@@ -3027,47 +3027,47 @@ export namespace Prisma {
   }
 
   export type SessionMinAggregateOutputType = {
-    id: string | null
     sessionToken: string | null
     userId: string | null
     expires: Date | null
+    id: string | null
   }
 
   export type SessionMaxAggregateOutputType = {
-    id: string | null
     sessionToken: string | null
     userId: string | null
     expires: Date | null
+    id: string | null
   }
 
   export type SessionCountAggregateOutputType = {
-    id: number
     sessionToken: number
     userId: number
     expires: number
+    id: number
     _all: number
   }
 
 
   export type SessionMinAggregateInputType = {
-    id?: true
     sessionToken?: true
     userId?: true
     expires?: true
+    id?: true
   }
 
   export type SessionMaxAggregateInputType = {
-    id?: true
     sessionToken?: true
     userId?: true
     expires?: true
+    id?: true
   }
 
   export type SessionCountAggregateInputType = {
-    id?: true
     sessionToken?: true
     userId?: true
     expires?: true
+    id?: true
     _all?: true
   }
 
@@ -3144,10 +3144,10 @@ export namespace Prisma {
   }
 
   export type SessionGroupByOutputType = {
-    id: string
     sessionToken: string
     userId: string
     expires: Date
+    id: string
     _count: SessionCountAggregateOutputType | null
     _min: SessionMinAggregateOutputType | null
     _max: SessionMaxAggregateOutputType | null
@@ -3168,37 +3168,37 @@ export namespace Prisma {
 
 
   export type SessionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
     sessionToken?: boolean
     userId?: boolean
     expires?: boolean
+    id?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["session"]>
 
   export type SessionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
     sessionToken?: boolean
     userId?: boolean
     expires?: boolean
+    id?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["session"]>
 
   export type SessionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
     sessionToken?: boolean
     userId?: boolean
     expires?: boolean
+    id?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["session"]>
 
   export type SessionSelectScalar = {
-    id?: boolean
     sessionToken?: boolean
     userId?: boolean
     expires?: boolean
+    id?: boolean
   }
 
-  export type SessionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "sessionToken" | "userId" | "expires", ExtArgs["result"]["session"]>
+  export type SessionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"sessionToken" | "userId" | "expires" | "id", ExtArgs["result"]["session"]>
   export type SessionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -3215,10 +3215,10 @@ export namespace Prisma {
       user: Prisma.$UserPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      id: string
       sessionToken: string
       userId: string
       expires: Date
+      id: string
     }, ExtArgs["result"]["session"]>
     composites: {}
   }
@@ -3302,8 +3302,8 @@ export namespace Prisma {
      * // Get first 10 Sessions
      * const sessions = await prisma.session.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const sessionWithIdOnly = await prisma.session.findMany({ select: { id: true } })
+     * // Only select the `sessionToken`
+     * const sessionWithSessionTokenOnly = await prisma.session.findMany({ select: { sessionToken: true } })
      * 
      */
     findMany<T extends SessionFindManyArgs>(args?: SelectSubset<T, SessionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SessionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -3347,9 +3347,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Create many Sessions and only return the `id`
-     * const sessionWithIdOnly = await prisma.session.createManyAndReturn({
-     *   select: { id: true },
+     * // Create many Sessions and only return the `sessionToken`
+     * const sessionWithSessionTokenOnly = await prisma.session.createManyAndReturn({
+     *   select: { sessionToken: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -3438,9 +3438,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Sessions and only return the `id`
-     * const sessionWithIdOnly = await prisma.session.updateManyAndReturn({
-     *   select: { id: true },
+     * // Update zero or more Sessions and only return the `sessionToken`
+     * const sessionWithSessionTokenOnly = await prisma.session.updateManyAndReturn({
+     *   select: { sessionToken: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3643,10 +3643,10 @@ export namespace Prisma {
    * Fields of the Session model
    */
   interface SessionFieldRefs {
-    readonly id: FieldRef<"Session", 'String'>
     readonly sessionToken: FieldRef<"Session", 'String'>
     readonly userId: FieldRef<"Session", 'String'>
     readonly expires: FieldRef<"Session", 'DateTime'>
+    readonly id: FieldRef<"Session", 'String'>
   }
     
 
@@ -5044,18 +5044,21 @@ export namespace Prisma {
     id: string | null
     name: string | null
     createdAt: Date | null
+    organizationCode: string | null
   }
 
   export type OrganizationMaxAggregateOutputType = {
     id: string | null
     name: string | null
     createdAt: Date | null
+    organizationCode: string | null
   }
 
   export type OrganizationCountAggregateOutputType = {
     id: number
     name: number
     createdAt: number
+    organizationCode: number
     _all: number
   }
 
@@ -5064,18 +5067,21 @@ export namespace Prisma {
     id?: true
     name?: true
     createdAt?: true
+    organizationCode?: true
   }
 
   export type OrganizationMaxAggregateInputType = {
     id?: true
     name?: true
     createdAt?: true
+    organizationCode?: true
   }
 
   export type OrganizationCountAggregateInputType = {
     id?: true
     name?: true
     createdAt?: true
+    organizationCode?: true
     _all?: true
   }
 
@@ -5155,6 +5161,7 @@ export namespace Prisma {
     id: string
     name: string
     createdAt: Date
+    organizationCode: string
     _count: OrganizationCountAggregateOutputType | null
     _min: OrganizationMinAggregateOutputType | null
     _max: OrganizationMaxAggregateOutputType | null
@@ -5178,8 +5185,9 @@ export namespace Prisma {
     id?: boolean
     name?: boolean
     createdAt?: boolean
-    sections?: boolean | Organization$sectionsArgs<ExtArgs>
+    organizationCode?: boolean
     items?: boolean | Organization$itemsArgs<ExtArgs>
+    sections?: boolean | Organization$sectionsArgs<ExtArgs>
     users?: boolean | Organization$usersArgs<ExtArgs>
     _count?: boolean | OrganizationCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["organization"]>
@@ -5188,24 +5196,27 @@ export namespace Prisma {
     id?: boolean
     name?: boolean
     createdAt?: boolean
+    organizationCode?: boolean
   }, ExtArgs["result"]["organization"]>
 
   export type OrganizationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     createdAt?: boolean
+    organizationCode?: boolean
   }, ExtArgs["result"]["organization"]>
 
   export type OrganizationSelectScalar = {
     id?: boolean
     name?: boolean
     createdAt?: boolean
+    organizationCode?: boolean
   }
 
-  export type OrganizationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "createdAt", ExtArgs["result"]["organization"]>
+  export type OrganizationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "createdAt" | "organizationCode", ExtArgs["result"]["organization"]>
   export type OrganizationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    sections?: boolean | Organization$sectionsArgs<ExtArgs>
     items?: boolean | Organization$itemsArgs<ExtArgs>
+    sections?: boolean | Organization$sectionsArgs<ExtArgs>
     users?: boolean | Organization$usersArgs<ExtArgs>
     _count?: boolean | OrganizationCountOutputTypeDefaultArgs<ExtArgs>
   }
@@ -5215,14 +5226,15 @@ export namespace Prisma {
   export type $OrganizationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Organization"
     objects: {
-      sections: Prisma.$InventorySectionPayload<ExtArgs>[]
       items: Prisma.$InventoryItemPayload<ExtArgs>[]
+      sections: Prisma.$InventorySectionPayload<ExtArgs>[]
       users: Prisma.$UserPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
       createdAt: Date
+      organizationCode: string
     }, ExtArgs["result"]["organization"]>
     composites: {}
   }
@@ -5617,8 +5629,8 @@ export namespace Prisma {
    */
   export interface Prisma__OrganizationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    sections<T extends Organization$sectionsArgs<ExtArgs> = {}>(args?: Subset<T, Organization$sectionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventorySectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     items<T extends Organization$itemsArgs<ExtArgs> = {}>(args?: Subset<T, Organization$itemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    sections<T extends Organization$sectionsArgs<ExtArgs> = {}>(args?: Subset<T, Organization$sectionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventorySectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     users<T extends Organization$usersArgs<ExtArgs> = {}>(args?: Subset<T, Organization$usersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -5652,6 +5664,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Organization", 'String'>
     readonly name: FieldRef<"Organization", 'String'>
     readonly createdAt: FieldRef<"Organization", 'DateTime'>
+    readonly organizationCode: FieldRef<"Organization", 'String'>
   }
     
 
@@ -6040,30 +6053,6 @@ export namespace Prisma {
   }
 
   /**
-   * Organization.sections
-   */
-  export type Organization$sectionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the InventorySection
-     */
-    select?: InventorySectionSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the InventorySection
-     */
-    omit?: InventorySectionOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: InventorySectionInclude<ExtArgs> | null
-    where?: InventorySectionWhereInput
-    orderBy?: InventorySectionOrderByWithRelationInput | InventorySectionOrderByWithRelationInput[]
-    cursor?: InventorySectionWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: InventorySectionScalarFieldEnum | InventorySectionScalarFieldEnum[]
-  }
-
-  /**
    * Organization.items
    */
   export type Organization$itemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -6085,6 +6074,30 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: InventoryItemScalarFieldEnum | InventoryItemScalarFieldEnum[]
+  }
+
+  /**
+   * Organization.sections
+   */
+  export type Organization$sectionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InventorySection
+     */
+    select?: InventorySectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the InventorySection
+     */
+    omit?: InventorySectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InventorySectionInclude<ExtArgs> | null
+    where?: InventorySectionWhereInput
+    orderBy?: InventorySectionOrderByWithRelationInput | InventorySectionOrderByWithRelationInput[]
+    cursor?: InventorySectionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: InventorySectionScalarFieldEnum | InventorySectionScalarFieldEnum[]
   }
 
   /**
@@ -6302,10 +6315,10 @@ export namespace Prisma {
     createdAt?: boolean
     parentId?: boolean
     organizationId?: boolean
+    items?: boolean | InventorySection$itemsArgs<ExtArgs>
+    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
     parent?: boolean | InventorySection$parentArgs<ExtArgs>
     children?: boolean | InventorySection$childrenArgs<ExtArgs>
-    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
-    items?: boolean | InventorySection$itemsArgs<ExtArgs>
     _count?: boolean | InventorySectionCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["inventorySection"]>
 
@@ -6316,8 +6329,8 @@ export namespace Prisma {
     createdAt?: boolean
     parentId?: boolean
     organizationId?: boolean
-    parent?: boolean | InventorySection$parentArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    parent?: boolean | InventorySection$parentArgs<ExtArgs>
   }, ExtArgs["result"]["inventorySection"]>
 
   export type InventorySectionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -6327,8 +6340,8 @@ export namespace Prisma {
     createdAt?: boolean
     parentId?: boolean
     organizationId?: boolean
-    parent?: boolean | InventorySection$parentArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    parent?: boolean | InventorySection$parentArgs<ExtArgs>
   }, ExtArgs["result"]["inventorySection"]>
 
   export type InventorySectionSelectScalar = {
@@ -6342,28 +6355,28 @@ export namespace Prisma {
 
   export type InventorySectionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "createdAt" | "parentId" | "organizationId", ExtArgs["result"]["inventorySection"]>
   export type InventorySectionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    items?: boolean | InventorySection$itemsArgs<ExtArgs>
+    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
     parent?: boolean | InventorySection$parentArgs<ExtArgs>
     children?: boolean | InventorySection$childrenArgs<ExtArgs>
-    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
-    items?: boolean | InventorySection$itemsArgs<ExtArgs>
     _count?: boolean | InventorySectionCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type InventorySectionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    parent?: boolean | InventorySection$parentArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    parent?: boolean | InventorySection$parentArgs<ExtArgs>
   }
   export type InventorySectionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    parent?: boolean | InventorySection$parentArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    parent?: boolean | InventorySection$parentArgs<ExtArgs>
   }
 
   export type $InventorySectionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "InventorySection"
     objects: {
+      items: Prisma.$InventoryItemPayload<ExtArgs>[]
+      organization: Prisma.$OrganizationPayload<ExtArgs>
       parent: Prisma.$InventorySectionPayload<ExtArgs> | null
       children: Prisma.$InventorySectionPayload<ExtArgs>[]
-      organization: Prisma.$OrganizationPayload<ExtArgs>
-      items: Prisma.$InventoryItemPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -6766,10 +6779,10 @@ export namespace Prisma {
    */
   export interface Prisma__InventorySectionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    items<T extends InventorySection$itemsArgs<ExtArgs> = {}>(args?: Subset<T, InventorySection$itemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    organization<T extends OrganizationDefaultArgs<ExtArgs> = {}>(args?: Subset<T, OrganizationDefaultArgs<ExtArgs>>): Prisma__OrganizationClient<$Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     parent<T extends InventorySection$parentArgs<ExtArgs> = {}>(args?: Subset<T, InventorySection$parentArgs<ExtArgs>>): Prisma__InventorySectionClient<$Result.GetResult<Prisma.$InventorySectionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     children<T extends InventorySection$childrenArgs<ExtArgs> = {}>(args?: Subset<T, InventorySection$childrenArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventorySectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    organization<T extends OrganizationDefaultArgs<ExtArgs> = {}>(args?: Subset<T, OrganizationDefaultArgs<ExtArgs>>): Prisma__OrganizationClient<$Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    items<T extends InventorySection$itemsArgs<ExtArgs> = {}>(args?: Subset<T, InventorySection$itemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -7201,6 +7214,30 @@ export namespace Prisma {
   }
 
   /**
+   * InventorySection.items
+   */
+  export type InventorySection$itemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InventoryItem
+     */
+    select?: InventoryItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the InventoryItem
+     */
+    omit?: InventoryItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InventoryItemInclude<ExtArgs> | null
+    where?: InventoryItemWhereInput
+    orderBy?: InventoryItemOrderByWithRelationInput | InventoryItemOrderByWithRelationInput[]
+    cursor?: InventoryItemWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: InventoryItemScalarFieldEnum | InventoryItemScalarFieldEnum[]
+  }
+
+  /**
    * InventorySection.parent
    */
   export type InventorySection$parentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -7241,30 +7278,6 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: InventorySectionScalarFieldEnum | InventorySectionScalarFieldEnum[]
-  }
-
-  /**
-   * InventorySection.items
-   */
-  export type InventorySection$itemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the InventoryItem
-     */
-    select?: InventoryItemSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the InventoryItem
-     */
-    omit?: InventoryItemOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: InventoryItemInclude<ExtArgs> | null
-    where?: InventoryItemWhereInput
-    orderBy?: InventoryItemOrderByWithRelationInput | InventoryItemOrderByWithRelationInput[]
-    cursor?: InventoryItemWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: InventoryItemScalarFieldEnum | InventoryItemScalarFieldEnum[]
   }
 
   /**
@@ -7516,10 +7529,10 @@ export namespace Prisma {
     createdById?: boolean
     sectionId?: boolean
     organizationId?: boolean
-    createdBy?: boolean | UserDefaultArgs<ExtArgs>
-    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
-    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
     auditLogs?: boolean | InventoryItem$auditLogsArgs<ExtArgs>
+    createdBy?: boolean | UserDefaultArgs<ExtArgs>
+    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
     transactions?: boolean | InventoryItem$transactionsArgs<ExtArgs>
     _count?: boolean | InventoryItemCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["inventoryItem"]>
@@ -7535,8 +7548,8 @@ export namespace Prisma {
     sectionId?: boolean
     organizationId?: boolean
     createdBy?: boolean | UserDefaultArgs<ExtArgs>
-    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
   }, ExtArgs["result"]["inventoryItem"]>
 
   export type InventoryItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -7550,8 +7563,8 @@ export namespace Prisma {
     sectionId?: boolean
     organizationId?: boolean
     createdBy?: boolean | UserDefaultArgs<ExtArgs>
-    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
   }, ExtArgs["result"]["inventoryItem"]>
 
   export type InventoryItemSelectScalar = {
@@ -7568,31 +7581,31 @@ export namespace Prisma {
 
   export type InventoryItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "quantity" | "location" | "sku" | "createdAt" | "createdById" | "sectionId" | "organizationId", ExtArgs["result"]["inventoryItem"]>
   export type InventoryItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    createdBy?: boolean | UserDefaultArgs<ExtArgs>
-    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
-    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
     auditLogs?: boolean | InventoryItem$auditLogsArgs<ExtArgs>
+    createdBy?: boolean | UserDefaultArgs<ExtArgs>
+    organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
     transactions?: boolean | InventoryItem$transactionsArgs<ExtArgs>
     _count?: boolean | InventoryItemCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type InventoryItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     createdBy?: boolean | UserDefaultArgs<ExtArgs>
-    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
   }
   export type InventoryItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     createdBy?: boolean | UserDefaultArgs<ExtArgs>
-    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
     organization?: boolean | OrganizationDefaultArgs<ExtArgs>
+    section?: boolean | InventoryItem$sectionArgs<ExtArgs>
   }
 
   export type $InventoryItemPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "InventoryItem"
     objects: {
-      createdBy: Prisma.$UserPayload<ExtArgs>
-      section: Prisma.$InventorySectionPayload<ExtArgs> | null
-      organization: Prisma.$OrganizationPayload<ExtArgs>
       auditLogs: Prisma.$AuditLogPayload<ExtArgs>[]
+      createdBy: Prisma.$UserPayload<ExtArgs>
+      organization: Prisma.$OrganizationPayload<ExtArgs>
+      section: Prisma.$InventorySectionPayload<ExtArgs> | null
       transactions: Prisma.$StockTransactionPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
@@ -7999,10 +8012,10 @@ export namespace Prisma {
    */
   export interface Prisma__InventoryItemClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    createdBy<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    section<T extends InventoryItem$sectionArgs<ExtArgs> = {}>(args?: Subset<T, InventoryItem$sectionArgs<ExtArgs>>): Prisma__InventorySectionClient<$Result.GetResult<Prisma.$InventorySectionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-    organization<T extends OrganizationDefaultArgs<ExtArgs> = {}>(args?: Subset<T, OrganizationDefaultArgs<ExtArgs>>): Prisma__OrganizationClient<$Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     auditLogs<T extends InventoryItem$auditLogsArgs<ExtArgs> = {}>(args?: Subset<T, InventoryItem$auditLogsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AuditLogPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    createdBy<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    organization<T extends OrganizationDefaultArgs<ExtArgs> = {}>(args?: Subset<T, OrganizationDefaultArgs<ExtArgs>>): Prisma__OrganizationClient<$Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    section<T extends InventoryItem$sectionArgs<ExtArgs> = {}>(args?: Subset<T, InventoryItem$sectionArgs<ExtArgs>>): Prisma__InventorySectionClient<$Result.GetResult<Prisma.$InventorySectionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     transactions<T extends InventoryItem$transactionsArgs<ExtArgs> = {}>(args?: Subset<T, InventoryItem$transactionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$StockTransactionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -8438,25 +8451,6 @@ export namespace Prisma {
   }
 
   /**
-   * InventoryItem.section
-   */
-  export type InventoryItem$sectionArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the InventorySection
-     */
-    select?: InventorySectionSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the InventorySection
-     */
-    omit?: InventorySectionOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: InventorySectionInclude<ExtArgs> | null
-    where?: InventorySectionWhereInput
-  }
-
-  /**
    * InventoryItem.auditLogs
    */
   export type InventoryItem$auditLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -8478,6 +8472,25 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: AuditLogScalarFieldEnum | AuditLogScalarFieldEnum[]
+  }
+
+  /**
+   * InventoryItem.section
+   */
+  export type InventoryItem$sectionArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InventorySection
+     */
+    select?: InventorySectionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the InventorySection
+     */
+    omit?: InventorySectionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InventorySectionInclude<ExtArgs> | null
+    where?: InventorySectionWhereInput
   }
 
   /**
@@ -8536,40 +8549,40 @@ export namespace Prisma {
   export type UserMinAggregateOutputType = {
     id: string | null
     email: string | null
-    emailVerified: Date | null
     name: string | null
-    password: string | null
-    image: string | null
-    role: $Enums.UserRole | null
     organizationId: string | null
-    createdAt: Date | null
+    password: string | null
+    role: $Enums.UserRole | null
+    emailVerified: Date | null
+    image: string | null
     updatedAt: Date | null
+    createdAt: Date | null
   }
 
   export type UserMaxAggregateOutputType = {
     id: string | null
     email: string | null
-    emailVerified: Date | null
     name: string | null
-    password: string | null
-    image: string | null
-    role: $Enums.UserRole | null
     organizationId: string | null
-    createdAt: Date | null
+    password: string | null
+    role: $Enums.UserRole | null
+    emailVerified: Date | null
+    image: string | null
     updatedAt: Date | null
+    createdAt: Date | null
   }
 
   export type UserCountAggregateOutputType = {
     id: number
     email: number
-    emailVerified: number
     name: number
-    password: number
-    image: number
-    role: number
     organizationId: number
-    createdAt: number
+    password: number
+    role: number
+    emailVerified: number
+    image: number
     updatedAt: number
+    createdAt: number
     _all: number
   }
 
@@ -8577,40 +8590,40 @@ export namespace Prisma {
   export type UserMinAggregateInputType = {
     id?: true
     email?: true
-    emailVerified?: true
     name?: true
-    password?: true
-    image?: true
-    role?: true
     organizationId?: true
-    createdAt?: true
+    password?: true
+    role?: true
+    emailVerified?: true
+    image?: true
     updatedAt?: true
+    createdAt?: true
   }
 
   export type UserMaxAggregateInputType = {
     id?: true
     email?: true
-    emailVerified?: true
     name?: true
-    password?: true
-    image?: true
-    role?: true
     organizationId?: true
-    createdAt?: true
+    password?: true
+    role?: true
+    emailVerified?: true
+    image?: true
     updatedAt?: true
+    createdAt?: true
   }
 
   export type UserCountAggregateInputType = {
     id?: true
     email?: true
-    emailVerified?: true
     name?: true
-    password?: true
-    image?: true
-    role?: true
     organizationId?: true
-    createdAt?: true
+    password?: true
+    role?: true
+    emailVerified?: true
+    image?: true
     updatedAt?: true
+    createdAt?: true
     _all?: true
   }
 
@@ -8689,14 +8702,14 @@ export namespace Prisma {
   export type UserGroupByOutputType = {
     id: string
     email: string
-    emailVerified: Date | null
     name: string
-    password: string | null
-    image: string | null
-    role: $Enums.UserRole | null
     organizationId: string | null
-    createdAt: Date
+    password: string | null
+    role: $Enums.UserRole | null
+    emailVerified: Date | null
+    image: string | null
     updatedAt: Date
+    createdAt: Date
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -8719,68 +8732,68 @@ export namespace Prisma {
   export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     email?: boolean
-    emailVerified?: boolean
     name?: boolean
-    password?: boolean
-    image?: boolean
-    role?: boolean
     organizationId?: boolean
-    createdAt?: boolean
+    password?: boolean
+    role?: boolean
+    emailVerified?: boolean
+    image?: boolean
     updatedAt?: boolean
-    createdItems?: boolean | User$createdItemsArgs<ExtArgs>
-    organization?: boolean | User$organizationArgs<ExtArgs>
+    createdAt?: boolean
     accounts?: boolean | User$accountsArgs<ExtArgs>
+    createdItems?: boolean | User$createdItemsArgs<ExtArgs>
     sessions?: boolean | User$sessionsArgs<ExtArgs>
+    organization?: boolean | User$organizationArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     email?: boolean
-    emailVerified?: boolean
     name?: boolean
-    password?: boolean
-    image?: boolean
-    role?: boolean
     organizationId?: boolean
-    createdAt?: boolean
+    password?: boolean
+    role?: boolean
+    emailVerified?: boolean
+    image?: boolean
     updatedAt?: boolean
+    createdAt?: boolean
     organization?: boolean | User$organizationArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     email?: boolean
-    emailVerified?: boolean
     name?: boolean
-    password?: boolean
-    image?: boolean
-    role?: boolean
     organizationId?: boolean
-    createdAt?: boolean
+    password?: boolean
+    role?: boolean
+    emailVerified?: boolean
+    image?: boolean
     updatedAt?: boolean
+    createdAt?: boolean
     organization?: boolean | User$organizationArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
     id?: boolean
     email?: boolean
-    emailVerified?: boolean
     name?: boolean
-    password?: boolean
-    image?: boolean
-    role?: boolean
     organizationId?: boolean
-    createdAt?: boolean
+    password?: boolean
+    role?: boolean
+    emailVerified?: boolean
+    image?: boolean
     updatedAt?: boolean
+    createdAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "emailVerified" | "name" | "password" | "image" | "role" | "organizationId" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "organizationId" | "password" | "role" | "emailVerified" | "image" | "updatedAt" | "createdAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    createdItems?: boolean | User$createdItemsArgs<ExtArgs>
-    organization?: boolean | User$organizationArgs<ExtArgs>
     accounts?: boolean | User$accountsArgs<ExtArgs>
+    createdItems?: boolean | User$createdItemsArgs<ExtArgs>
     sessions?: boolean | User$sessionsArgs<ExtArgs>
+    organization?: boolean | User$organizationArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -8793,22 +8806,22 @@ export namespace Prisma {
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {
-      createdItems: Prisma.$InventoryItemPayload<ExtArgs>[]
-      organization: Prisma.$OrganizationPayload<ExtArgs> | null
       accounts: Prisma.$AccountPayload<ExtArgs>[]
+      createdItems: Prisma.$InventoryItemPayload<ExtArgs>[]
       sessions: Prisma.$SessionPayload<ExtArgs>[]
+      organization: Prisma.$OrganizationPayload<ExtArgs> | null
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       email: string
-      emailVerified: Date | null
       name: string
-      password: string | null
-      image: string | null
-      role: $Enums.UserRole | null
       organizationId: string | null
-      createdAt: Date
+      password: string | null
+      role: $Enums.UserRole | null
+      emailVerified: Date | null
+      image: string | null
       updatedAt: Date
+      createdAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -9203,10 +9216,10 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    createdItems<T extends User$createdItemsArgs<ExtArgs> = {}>(args?: Subset<T, User$createdItemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    organization<T extends User$organizationArgs<ExtArgs> = {}>(args?: Subset<T, User$organizationArgs<ExtArgs>>): Prisma__OrganizationClient<$Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     accounts<T extends User$accountsArgs<ExtArgs> = {}>(args?: Subset<T, User$accountsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AccountPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    createdItems<T extends User$createdItemsArgs<ExtArgs> = {}>(args?: Subset<T, User$createdItemsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryItemPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     sessions<T extends User$sessionsArgs<ExtArgs> = {}>(args?: Subset<T, User$sessionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SessionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    organization<T extends User$organizationArgs<ExtArgs> = {}>(args?: Subset<T, User$organizationArgs<ExtArgs>>): Prisma__OrganizationClient<$Result.GetResult<Prisma.$OrganizationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -9238,14 +9251,14 @@ export namespace Prisma {
   interface UserFieldRefs {
     readonly id: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
-    readonly emailVerified: FieldRef<"User", 'DateTime'>
     readonly name: FieldRef<"User", 'String'>
-    readonly password: FieldRef<"User", 'String'>
-    readonly image: FieldRef<"User", 'String'>
-    readonly role: FieldRef<"User", 'UserRole'>
     readonly organizationId: FieldRef<"User", 'String'>
-    readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly password: FieldRef<"User", 'String'>
+    readonly role: FieldRef<"User", 'UserRole'>
+    readonly emailVerified: FieldRef<"User", 'DateTime'>
+    readonly image: FieldRef<"User", 'String'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
+    readonly createdAt: FieldRef<"User", 'DateTime'>
   }
     
 
@@ -9642,49 +9655,6 @@ export namespace Prisma {
   }
 
   /**
-   * User.createdItems
-   */
-  export type User$createdItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the InventoryItem
-     */
-    select?: InventoryItemSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the InventoryItem
-     */
-    omit?: InventoryItemOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: InventoryItemInclude<ExtArgs> | null
-    where?: InventoryItemWhereInput
-    orderBy?: InventoryItemOrderByWithRelationInput | InventoryItemOrderByWithRelationInput[]
-    cursor?: InventoryItemWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: InventoryItemScalarFieldEnum | InventoryItemScalarFieldEnum[]
-  }
-
-  /**
-   * User.organization
-   */
-  export type User$organizationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Organization
-     */
-    select?: OrganizationSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Organization
-     */
-    omit?: OrganizationOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OrganizationInclude<ExtArgs> | null
-    where?: OrganizationWhereInput
-  }
-
-  /**
    * User.accounts
    */
   export type User$accountsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -9709,6 +9679,30 @@ export namespace Prisma {
   }
 
   /**
+   * User.createdItems
+   */
+  export type User$createdItemsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the InventoryItem
+     */
+    select?: InventoryItemSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the InventoryItem
+     */
+    omit?: InventoryItemOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: InventoryItemInclude<ExtArgs> | null
+    where?: InventoryItemWhereInput
+    orderBy?: InventoryItemOrderByWithRelationInput | InventoryItemOrderByWithRelationInput[]
+    cursor?: InventoryItemWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: InventoryItemScalarFieldEnum | InventoryItemScalarFieldEnum[]
+  }
+
+  /**
    * User.sessions
    */
   export type User$sessionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -9730,6 +9724,25 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: SessionScalarFieldEnum | SessionScalarFieldEnum[]
+  }
+
+  /**
+   * User.organization
+   */
+  export type User$organizationArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Organization
+     */
+    select?: OrganizationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Organization
+     */
+    omit?: OrganizationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: OrganizationInclude<ExtArgs> | null
+    where?: OrganizationWhereInput
   }
 
   /**
@@ -11969,10 +11982,10 @@ export namespace Prisma {
 
 
   export const SessionScalarFieldEnum: {
-    id: 'id',
     sessionToken: 'sessionToken',
     userId: 'userId',
-    expires: 'expires'
+    expires: 'expires',
+    id: 'id'
   };
 
   export type SessionScalarFieldEnum = (typeof SessionScalarFieldEnum)[keyof typeof SessionScalarFieldEnum]
@@ -11990,7 +12003,8 @@ export namespace Prisma {
   export const OrganizationScalarFieldEnum: {
     id: 'id',
     name: 'name',
-    createdAt: 'createdAt'
+    createdAt: 'createdAt',
+    organizationCode: 'organizationCode'
   };
 
   export type OrganizationScalarFieldEnum = (typeof OrganizationScalarFieldEnum)[keyof typeof OrganizationScalarFieldEnum]
@@ -12026,14 +12040,14 @@ export namespace Prisma {
   export const UserScalarFieldEnum: {
     id: 'id',
     email: 'email',
-    emailVerified: 'emailVerified',
     name: 'name',
-    password: 'password',
-    image: 'image',
-    role: 'role',
     organizationId: 'organizationId',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    password: 'password',
+    role: 'role',
+    emailVerified: 'emailVerified',
+    image: 'image',
+    updatedAt: 'updatedAt',
+    createdAt: 'createdAt'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -12293,24 +12307,24 @@ export namespace Prisma {
     AND?: SessionWhereInput | SessionWhereInput[]
     OR?: SessionWhereInput[]
     NOT?: SessionWhereInput | SessionWhereInput[]
-    id?: StringFilter<"Session"> | string
     sessionToken?: StringFilter<"Session"> | string
     userId?: StringFilter<"Session"> | string
     expires?: DateTimeFilter<"Session"> | Date | string
+    id?: StringFilter<"Session"> | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }
 
   export type SessionOrderByWithRelationInput = {
-    id?: SortOrder
     sessionToken?: SortOrder
     userId?: SortOrder
     expires?: SortOrder
+    id?: SortOrder
     user?: UserOrderByWithRelationInput
   }
 
   export type SessionWhereUniqueInput = Prisma.AtLeast<{
-    id?: string
     sessionToken?: string
+    id?: string
     AND?: SessionWhereInput | SessionWhereInput[]
     OR?: SessionWhereInput[]
     NOT?: SessionWhereInput | SessionWhereInput[]
@@ -12320,10 +12334,10 @@ export namespace Prisma {
   }, "id" | "sessionToken">
 
   export type SessionOrderByWithAggregationInput = {
-    id?: SortOrder
     sessionToken?: SortOrder
     userId?: SortOrder
     expires?: SortOrder
+    id?: SortOrder
     _count?: SessionCountOrderByAggregateInput
     _max?: SessionMaxOrderByAggregateInput
     _min?: SessionMinOrderByAggregateInput
@@ -12333,10 +12347,10 @@ export namespace Prisma {
     AND?: SessionScalarWhereWithAggregatesInput | SessionScalarWhereWithAggregatesInput[]
     OR?: SessionScalarWhereWithAggregatesInput[]
     NOT?: SessionScalarWhereWithAggregatesInput | SessionScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"Session"> | string
     sessionToken?: StringWithAggregatesFilter<"Session"> | string
     userId?: StringWithAggregatesFilter<"Session"> | string
     expires?: DateTimeWithAggregatesFilter<"Session"> | Date | string
+    id?: StringWithAggregatesFilter<"Session"> | string
   }
 
   export type VerificationTokenWhereInput = {
@@ -12389,8 +12403,9 @@ export namespace Prisma {
     id?: StringFilter<"Organization"> | string
     name?: StringFilter<"Organization"> | string
     createdAt?: DateTimeFilter<"Organization"> | Date | string
-    sections?: InventorySectionListRelationFilter
+    organizationCode?: StringFilter<"Organization"> | string
     items?: InventoryItemListRelationFilter
+    sections?: InventorySectionListRelationFilter
     users?: UserListRelationFilter
   }
 
@@ -12398,27 +12413,30 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
-    sections?: InventorySectionOrderByRelationAggregateInput
+    organizationCode?: SortOrder
     items?: InventoryItemOrderByRelationAggregateInput
+    sections?: InventorySectionOrderByRelationAggregateInput
     users?: UserOrderByRelationAggregateInput
   }
 
   export type OrganizationWhereUniqueInput = Prisma.AtLeast<{
     id?: string
+    organizationCode?: string
     AND?: OrganizationWhereInput | OrganizationWhereInput[]
     OR?: OrganizationWhereInput[]
     NOT?: OrganizationWhereInput | OrganizationWhereInput[]
     name?: StringFilter<"Organization"> | string
     createdAt?: DateTimeFilter<"Organization"> | Date | string
-    sections?: InventorySectionListRelationFilter
     items?: InventoryItemListRelationFilter
+    sections?: InventorySectionListRelationFilter
     users?: UserListRelationFilter
-  }, "id">
+  }, "id" | "organizationCode">
 
   export type OrganizationOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
+    organizationCode?: SortOrder
     _count?: OrganizationCountOrderByAggregateInput
     _max?: OrganizationMaxOrderByAggregateInput
     _min?: OrganizationMinOrderByAggregateInput
@@ -12431,6 +12449,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Organization"> | string
     name?: StringWithAggregatesFilter<"Organization"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Organization"> | Date | string
+    organizationCode?: StringWithAggregatesFilter<"Organization"> | string
   }
 
   export type InventorySectionWhereInput = {
@@ -12443,10 +12462,10 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"InventorySection"> | Date | string
     parentId?: StringNullableFilter<"InventorySection"> | string | null
     organizationId?: StringFilter<"InventorySection"> | string
+    items?: InventoryItemListRelationFilter
+    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
     parent?: XOR<InventorySectionNullableScalarRelationFilter, InventorySectionWhereInput> | null
     children?: InventorySectionListRelationFilter
-    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
-    items?: InventoryItemListRelationFilter
   }
 
   export type InventorySectionOrderByWithRelationInput = {
@@ -12456,10 +12475,10 @@ export namespace Prisma {
     createdAt?: SortOrder
     parentId?: SortOrderInput | SortOrder
     organizationId?: SortOrder
+    items?: InventoryItemOrderByRelationAggregateInput
+    organization?: OrganizationOrderByWithRelationInput
     parent?: InventorySectionOrderByWithRelationInput
     children?: InventorySectionOrderByRelationAggregateInput
-    organization?: OrganizationOrderByWithRelationInput
-    items?: InventoryItemOrderByRelationAggregateInput
   }
 
   export type InventorySectionWhereUniqueInput = Prisma.AtLeast<{
@@ -12473,10 +12492,10 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"InventorySection"> | Date | string
     parentId?: StringNullableFilter<"InventorySection"> | string | null
     organizationId?: StringFilter<"InventorySection"> | string
+    items?: InventoryItemListRelationFilter
+    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
     parent?: XOR<InventorySectionNullableScalarRelationFilter, InventorySectionWhereInput> | null
     children?: InventorySectionListRelationFilter
-    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
-    items?: InventoryItemListRelationFilter
   }, "id" | "name_organizationId">
 
   export type InventorySectionOrderByWithAggregationInput = {
@@ -12516,10 +12535,10 @@ export namespace Prisma {
     createdById?: StringFilter<"InventoryItem"> | string
     sectionId?: StringNullableFilter<"InventoryItem"> | string | null
     organizationId?: StringFilter<"InventoryItem"> | string
-    createdBy?: XOR<UserScalarRelationFilter, UserWhereInput>
-    section?: XOR<InventorySectionNullableScalarRelationFilter, InventorySectionWhereInput> | null
-    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
     auditLogs?: AuditLogListRelationFilter
+    createdBy?: XOR<UserScalarRelationFilter, UserWhereInput>
+    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
+    section?: XOR<InventorySectionNullableScalarRelationFilter, InventorySectionWhereInput> | null
     transactions?: StockTransactionListRelationFilter
   }
 
@@ -12533,10 +12552,10 @@ export namespace Prisma {
     createdById?: SortOrder
     sectionId?: SortOrderInput | SortOrder
     organizationId?: SortOrder
-    createdBy?: UserOrderByWithRelationInput
-    section?: InventorySectionOrderByWithRelationInput
-    organization?: OrganizationOrderByWithRelationInput
     auditLogs?: AuditLogOrderByRelationAggregateInput
+    createdBy?: UserOrderByWithRelationInput
+    organization?: OrganizationOrderByWithRelationInput
+    section?: InventorySectionOrderByWithRelationInput
     transactions?: StockTransactionOrderByRelationAggregateInput
   }
 
@@ -12553,10 +12572,10 @@ export namespace Prisma {
     createdById?: StringFilter<"InventoryItem"> | string
     sectionId?: StringNullableFilter<"InventoryItem"> | string | null
     organizationId?: StringFilter<"InventoryItem"> | string
-    createdBy?: XOR<UserScalarRelationFilter, UserWhereInput>
-    section?: XOR<InventorySectionNullableScalarRelationFilter, InventorySectionWhereInput> | null
-    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
     auditLogs?: AuditLogListRelationFilter
+    createdBy?: XOR<UserScalarRelationFilter, UserWhereInput>
+    organization?: XOR<OrganizationScalarRelationFilter, OrganizationWhereInput>
+    section?: XOR<InventorySectionNullableScalarRelationFilter, InventorySectionWhereInput> | null
     transactions?: StockTransactionListRelationFilter
   }, "id" | "sku">
 
@@ -12598,35 +12617,35 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     id?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
-    emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
     name?: StringFilter<"User"> | string
-    password?: StringNullableFilter<"User"> | string | null
-    image?: StringNullableFilter<"User"> | string | null
-    role?: EnumUserRoleNullableFilter<"User"> | $Enums.UserRole | null
     organizationId?: StringNullableFilter<"User"> | string | null
-    createdAt?: DateTimeFilter<"User"> | Date | string
+    password?: StringNullableFilter<"User"> | string | null
+    role?: EnumUserRoleNullableFilter<"User"> | $Enums.UserRole | null
+    emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
+    image?: StringNullableFilter<"User"> | string | null
     updatedAt?: DateTimeFilter<"User"> | Date | string
-    createdItems?: InventoryItemListRelationFilter
-    organization?: XOR<OrganizationNullableScalarRelationFilter, OrganizationWhereInput> | null
+    createdAt?: DateTimeFilter<"User"> | Date | string
     accounts?: AccountListRelationFilter
+    createdItems?: InventoryItemListRelationFilter
     sessions?: SessionListRelationFilter
+    organization?: XOR<OrganizationNullableScalarRelationFilter, OrganizationWhereInput> | null
   }
 
   export type UserOrderByWithRelationInput = {
     id?: SortOrder
     email?: SortOrder
-    emailVerified?: SortOrderInput | SortOrder
     name?: SortOrder
-    password?: SortOrderInput | SortOrder
-    image?: SortOrderInput | SortOrder
-    role?: SortOrderInput | SortOrder
     organizationId?: SortOrderInput | SortOrder
-    createdAt?: SortOrder
+    password?: SortOrderInput | SortOrder
+    role?: SortOrderInput | SortOrder
+    emailVerified?: SortOrderInput | SortOrder
+    image?: SortOrderInput | SortOrder
     updatedAt?: SortOrder
-    createdItems?: InventoryItemOrderByRelationAggregateInput
-    organization?: OrganizationOrderByWithRelationInput
+    createdAt?: SortOrder
     accounts?: AccountOrderByRelationAggregateInput
+    createdItems?: InventoryItemOrderByRelationAggregateInput
     sessions?: SessionOrderByRelationAggregateInput
+    organization?: OrganizationOrderByWithRelationInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -12635,31 +12654,31 @@ export namespace Prisma {
     AND?: UserWhereInput | UserWhereInput[]
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
-    emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
     name?: StringFilter<"User"> | string
-    password?: StringNullableFilter<"User"> | string | null
-    image?: StringNullableFilter<"User"> | string | null
-    role?: EnumUserRoleNullableFilter<"User"> | $Enums.UserRole | null
     organizationId?: StringNullableFilter<"User"> | string | null
-    createdAt?: DateTimeFilter<"User"> | Date | string
+    password?: StringNullableFilter<"User"> | string | null
+    role?: EnumUserRoleNullableFilter<"User"> | $Enums.UserRole | null
+    emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
+    image?: StringNullableFilter<"User"> | string | null
     updatedAt?: DateTimeFilter<"User"> | Date | string
-    createdItems?: InventoryItemListRelationFilter
-    organization?: XOR<OrganizationNullableScalarRelationFilter, OrganizationWhereInput> | null
+    createdAt?: DateTimeFilter<"User"> | Date | string
     accounts?: AccountListRelationFilter
+    createdItems?: InventoryItemListRelationFilter
     sessions?: SessionListRelationFilter
+    organization?: XOR<OrganizationNullableScalarRelationFilter, OrganizationWhereInput> | null
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
     id?: SortOrder
     email?: SortOrder
-    emailVerified?: SortOrderInput | SortOrder
     name?: SortOrder
-    password?: SortOrderInput | SortOrder
-    image?: SortOrderInput | SortOrder
-    role?: SortOrderInput | SortOrder
     organizationId?: SortOrderInput | SortOrder
-    createdAt?: SortOrder
+    password?: SortOrderInput | SortOrder
+    role?: SortOrderInput | SortOrder
+    emailVerified?: SortOrderInput | SortOrder
+    image?: SortOrderInput | SortOrder
     updatedAt?: SortOrder
+    createdAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -12671,14 +12690,14 @@ export namespace Prisma {
     NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"User"> | string
     email?: StringWithAggregatesFilter<"User"> | string
-    emailVerified?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
     name?: StringWithAggregatesFilter<"User"> | string
-    password?: StringNullableWithAggregatesFilter<"User"> | string | null
-    image?: StringNullableWithAggregatesFilter<"User"> | string | null
-    role?: EnumUserRoleNullableWithAggregatesFilter<"User"> | $Enums.UserRole | null
     organizationId?: StringNullableWithAggregatesFilter<"User"> | string | null
-    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    password?: StringNullableWithAggregatesFilter<"User"> | string | null
+    role?: EnumUserRoleNullableWithAggregatesFilter<"User"> | $Enums.UserRole | null
+    emailVerified?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
+    image?: StringNullableWithAggregatesFilter<"User"> | string | null
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
   export type AuditLogWhereInput = {
@@ -12907,51 +12926,51 @@ export namespace Prisma {
   }
 
   export type SessionCreateInput = {
-    id?: string
     sessionToken: string
     expires: Date | string
+    id?: string
     user: UserCreateNestedOneWithoutSessionsInput
   }
 
   export type SessionUncheckedCreateInput = {
-    id?: string
     sessionToken: string
     userId: string
     expires: Date | string
+    id?: string
   }
 
   export type SessionUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     sessionToken?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
     user?: UserUpdateOneRequiredWithoutSessionsNestedInput
   }
 
   export type SessionUncheckedUpdateInput = {
-    id?: StringFieldUpdateOperationsInput | string
     sessionToken?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
   }
 
   export type SessionCreateManyInput = {
-    id?: string
     sessionToken: string
     userId: string
     expires: Date | string
+    id?: string
   }
 
   export type SessionUpdateManyMutationInput = {
-    id?: StringFieldUpdateOperationsInput | string
     sessionToken?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
   }
 
   export type SessionUncheckedUpdateManyInput = {
-    id?: StringFieldUpdateOperationsInput | string
     sessionToken?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
   }
 
   export type VerificationTokenCreateInput = {
@@ -13000,8 +13019,9 @@ export namespace Prisma {
     id?: string
     name: string
     createdAt?: Date | string
-    sections?: InventorySectionCreateNestedManyWithoutOrganizationInput
+    organizationCode: string
     items?: InventoryItemCreateNestedManyWithoutOrganizationInput
+    sections?: InventorySectionCreateNestedManyWithoutOrganizationInput
     users?: UserCreateNestedManyWithoutOrganizationInput
   }
 
@@ -13009,8 +13029,9 @@ export namespace Prisma {
     id?: string
     name: string
     createdAt?: Date | string
-    sections?: InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput
+    organizationCode: string
     items?: InventoryItemUncheckedCreateNestedManyWithoutOrganizationInput
+    sections?: InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput
     users?: UserUncheckedCreateNestedManyWithoutOrganizationInput
   }
 
@@ -13018,8 +13039,9 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sections?: InventorySectionUpdateManyWithoutOrganizationNestedInput
+    organizationCode?: StringFieldUpdateOperationsInput | string
     items?: InventoryItemUpdateManyWithoutOrganizationNestedInput
+    sections?: InventorySectionUpdateManyWithoutOrganizationNestedInput
     users?: UserUpdateManyWithoutOrganizationNestedInput
   }
 
@@ -13027,8 +13049,9 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sections?: InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput
+    organizationCode?: StringFieldUpdateOperationsInput | string
     items?: InventoryItemUncheckedUpdateManyWithoutOrganizationNestedInput
+    sections?: InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput
     users?: UserUncheckedUpdateManyWithoutOrganizationNestedInput
   }
 
@@ -13036,18 +13059,21 @@ export namespace Prisma {
     id?: string
     name: string
     createdAt?: Date | string
+    organizationCode: string
   }
 
   export type OrganizationUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
   }
 
   export type OrganizationUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
   }
 
   export type InventorySectionCreateInput = {
@@ -13055,10 +13081,10 @@ export namespace Prisma {
     name: string
     description?: string | null
     createdAt?: Date | string
+    items?: InventoryItemCreateNestedManyWithoutSectionInput
+    organization: OrganizationCreateNestedOneWithoutSectionsInput
     parent?: InventorySectionCreateNestedOneWithoutChildrenInput
     children?: InventorySectionCreateNestedManyWithoutParentInput
-    organization: OrganizationCreateNestedOneWithoutSectionsInput
-    items?: InventoryItemCreateNestedManyWithoutSectionInput
   }
 
   export type InventorySectionUncheckedCreateInput = {
@@ -13068,8 +13094,8 @@ export namespace Prisma {
     createdAt?: Date | string
     parentId?: string | null
     organizationId: string
-    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
     items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
+    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
   }
 
   export type InventorySectionUpdateInput = {
@@ -13077,10 +13103,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    items?: InventoryItemUpdateManyWithoutSectionNestedInput
+    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
     parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
     children?: InventorySectionUpdateManyWithoutParentNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
-    items?: InventoryItemUpdateManyWithoutSectionNestedInput
   }
 
   export type InventorySectionUncheckedUpdateInput = {
@@ -13090,8 +13116,8 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     parentId?: NullableStringFieldUpdateOperationsInput | string | null
     organizationId?: StringFieldUpdateOperationsInput | string
-    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
     items?: InventoryItemUncheckedUpdateManyWithoutSectionNestedInput
+    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
   }
 
   export type InventorySectionCreateManyInput = {
@@ -13126,10 +13152,10 @@ export namespace Prisma {
     location: string
     sku: string
     createdAt?: Date | string
-    createdBy: UserCreateNestedOneWithoutCreatedItemsInput
-    section?: InventorySectionCreateNestedOneWithoutItemsInput
-    organization: OrganizationCreateNestedOneWithoutItemsInput
     auditLogs?: AuditLogCreateNestedManyWithoutItemInput
+    createdBy: UserCreateNestedOneWithoutCreatedItemsInput
+    organization: OrganizationCreateNestedOneWithoutItemsInput
+    section?: InventorySectionCreateNestedOneWithoutItemsInput
     transactions?: StockTransactionCreateNestedManyWithoutItemInput
   }
 
@@ -13154,10 +13180,10 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
     sku?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
-    section?: InventorySectionUpdateOneWithoutItemsNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
     auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
+    createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
+    organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
+    section?: InventorySectionUpdateOneWithoutItemsNestedInput
     transactions?: StockTransactionUpdateManyWithoutItemNestedInput
   }
 
@@ -13211,103 +13237,103 @@ export namespace Prisma {
   export type UserCreateInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
     password?: string | null
-    image?: string | null
     role?: $Enums.UserRole | null
-    createdAt?: Date | string
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
-    createdItems?: InventoryItemCreateNestedManyWithoutCreatedByInput
-    organization?: OrganizationCreateNestedOneWithoutUsersInput
+    createdAt?: Date | string
     accounts?: AccountCreateNestedManyWithoutUserInput
+    createdItems?: InventoryItemCreateNestedManyWithoutCreatedByInput
     sessions?: SessionCreateNestedManyWithoutUserInput
+    organization?: OrganizationCreateNestedOneWithoutUsersInput
   }
 
   export type UserUncheckedCreateInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
-    password?: string | null
-    image?: string | null
-    role?: $Enums.UserRole | null
     organizationId?: string | null
-    createdAt?: Date | string
+    password?: string | null
+    role?: $Enums.UserRole | null
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
-    createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
+    createdAt?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdItems?: InventoryItemUpdateManyWithoutCreatedByNestedInput
-    organization?: OrganizationUpdateOneWithoutUsersNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUpdateManyWithoutUserNestedInput
+    createdItems?: InventoryItemUpdateManyWithoutCreatedByNestedInput
     sessions?: SessionUpdateManyWithoutUserNestedInput
+    organization?: OrganizationUpdateOneWithoutUsersNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
-    password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
-    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
     organizationId?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
-    password?: string | null
-    image?: string | null
-    role?: $Enums.UserRole | null
     organizationId?: string | null
-    createdAt?: Date | string
+    password?: string | null
+    role?: $Enums.UserRole | null
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
+    createdAt?: Date | string
   }
 
   export type UserUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
-    password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
-    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
     organizationId?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type AuditLogCreateInput = {
@@ -13610,24 +13636,24 @@ export namespace Prisma {
   }
 
   export type SessionCountOrderByAggregateInput = {
-    id?: SortOrder
     sessionToken?: SortOrder
     userId?: SortOrder
     expires?: SortOrder
+    id?: SortOrder
   }
 
   export type SessionMaxOrderByAggregateInput = {
-    id?: SortOrder
     sessionToken?: SortOrder
     userId?: SortOrder
     expires?: SortOrder
+    id?: SortOrder
   }
 
   export type SessionMinOrderByAggregateInput = {
-    id?: SortOrder
     sessionToken?: SortOrder
     userId?: SortOrder
     expires?: SortOrder
+    id?: SortOrder
   }
 
   export type VerificationTokenIdentifierTokenCompoundUniqueInput = {
@@ -13653,16 +13679,16 @@ export namespace Prisma {
     expires?: SortOrder
   }
 
-  export type InventorySectionListRelationFilter = {
-    every?: InventorySectionWhereInput
-    some?: InventorySectionWhereInput
-    none?: InventorySectionWhereInput
-  }
-
   export type InventoryItemListRelationFilter = {
     every?: InventoryItemWhereInput
     some?: InventoryItemWhereInput
     none?: InventoryItemWhereInput
+  }
+
+  export type InventorySectionListRelationFilter = {
+    every?: InventorySectionWhereInput
+    some?: InventorySectionWhereInput
+    none?: InventorySectionWhereInput
   }
 
   export type UserListRelationFilter = {
@@ -13671,11 +13697,11 @@ export namespace Prisma {
     none?: UserWhereInput
   }
 
-  export type InventorySectionOrderByRelationAggregateInput = {
+  export type InventoryItemOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type InventoryItemOrderByRelationAggregateInput = {
+  export type InventorySectionOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -13687,28 +13713,31 @@ export namespace Prisma {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
+    organizationCode?: SortOrder
   }
 
   export type OrganizationMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
+    organizationCode?: SortOrder
   }
 
   export type OrganizationMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     createdAt?: SortOrder
-  }
-
-  export type InventorySectionNullableScalarRelationFilter = {
-    is?: InventorySectionWhereInput | null
-    isNot?: InventorySectionWhereInput | null
+    organizationCode?: SortOrder
   }
 
   export type OrganizationScalarRelationFilter = {
     is?: OrganizationWhereInput
     isNot?: OrganizationWhereInput
+  }
+
+  export type InventorySectionNullableScalarRelationFilter = {
+    is?: InventorySectionWhereInput | null
+    isNot?: InventorySectionWhereInput | null
   }
 
   export type InventorySectionNameOrganizationIdCompoundUniqueInput = {
@@ -13834,6 +13863,13 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
+  export type EnumUserRoleNullableFilter<$PrismaModel = never> = {
+    equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
+    in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
+    notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
+    not?: NestedEnumUserRoleNullableFilter<$PrismaModel> | $Enums.UserRole | null
+  }
+
   export type DateTimeNullableFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
@@ -13843,18 +13879,6 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
-  }
-
-  export type EnumUserRoleNullableFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
-    in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    not?: NestedEnumUserRoleNullableFilter<$PrismaModel> | $Enums.UserRole | null
-  }
-
-  export type OrganizationNullableScalarRelationFilter = {
-    is?: OrganizationWhereInput | null
-    isNot?: OrganizationWhereInput | null
   }
 
   export type AccountListRelationFilter = {
@@ -13869,6 +13893,11 @@ export namespace Prisma {
     none?: SessionWhereInput
   }
 
+  export type OrganizationNullableScalarRelationFilter = {
+    is?: OrganizationWhereInput | null
+    isNot?: OrganizationWhereInput | null
+  }
+
   export type AccountOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -13880,40 +13909,50 @@ export namespace Prisma {
   export type UserCountOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
-    emailVerified?: SortOrder
     name?: SortOrder
-    password?: SortOrder
-    image?: SortOrder
-    role?: SortOrder
     organizationId?: SortOrder
-    createdAt?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    emailVerified?: SortOrder
+    image?: SortOrder
     updatedAt?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
-    emailVerified?: SortOrder
     name?: SortOrder
-    password?: SortOrder
-    image?: SortOrder
-    role?: SortOrder
     organizationId?: SortOrder
-    createdAt?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    emailVerified?: SortOrder
+    image?: SortOrder
     updatedAt?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
-    emailVerified?: SortOrder
     name?: SortOrder
-    password?: SortOrder
-    image?: SortOrder
-    role?: SortOrder
     organizationId?: SortOrder
-    createdAt?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    emailVerified?: SortOrder
+    image?: SortOrder
     updatedAt?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type EnumUserRoleNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
+    in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
+    notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
+    not?: NestedEnumUserRoleNullableWithAggregatesFilter<$PrismaModel> | $Enums.UserRole | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedEnumUserRoleNullableFilter<$PrismaModel>
+    _max?: NestedEnumUserRoleNullableFilter<$PrismaModel>
   }
 
   export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -13928,16 +13967,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type EnumUserRoleNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
-    in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    not?: NestedEnumUserRoleNullableWithAggregatesFilter<$PrismaModel> | $Enums.UserRole | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedEnumUserRoleNullableFilter<$PrismaModel>
-    _max?: NestedEnumUserRoleNullableFilter<$PrismaModel>
   }
 
   export type EnumAuditActionFilter<$PrismaModel = never> = {
@@ -14091,18 +14120,18 @@ export namespace Prisma {
     update?: XOR<XOR<UserUpdateToOneWithWhereWithoutSessionsInput, UserUpdateWithoutSessionsInput>, UserUncheckedUpdateWithoutSessionsInput>
   }
 
-  export type InventorySectionCreateNestedManyWithoutOrganizationInput = {
-    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
-    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
-    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-  }
-
   export type InventoryItemCreateNestedManyWithoutOrganizationInput = {
     create?: XOR<InventoryItemCreateWithoutOrganizationInput, InventoryItemUncheckedCreateWithoutOrganizationInput> | InventoryItemCreateWithoutOrganizationInput[] | InventoryItemUncheckedCreateWithoutOrganizationInput[]
     connectOrCreate?: InventoryItemCreateOrConnectWithoutOrganizationInput | InventoryItemCreateOrConnectWithoutOrganizationInput[]
     createMany?: InventoryItemCreateManyOrganizationInputEnvelope
     connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+  }
+
+  export type InventorySectionCreateNestedManyWithoutOrganizationInput = {
+    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
+    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
+    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
   }
 
   export type UserCreateNestedManyWithoutOrganizationInput = {
@@ -14112,13 +14141,6 @@ export namespace Prisma {
     connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
   }
 
-  export type InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput = {
-    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
-    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
-    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-  }
-
   export type InventoryItemUncheckedCreateNestedManyWithoutOrganizationInput = {
     create?: XOR<InventoryItemCreateWithoutOrganizationInput, InventoryItemUncheckedCreateWithoutOrganizationInput> | InventoryItemCreateWithoutOrganizationInput[] | InventoryItemUncheckedCreateWithoutOrganizationInput[]
     connectOrCreate?: InventoryItemCreateOrConnectWithoutOrganizationInput | InventoryItemCreateOrConnectWithoutOrganizationInput[]
@@ -14126,25 +14148,18 @@ export namespace Prisma {
     connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
   }
 
+  export type InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput = {
+    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
+    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
+    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+  }
+
   export type UserUncheckedCreateNestedManyWithoutOrganizationInput = {
     create?: XOR<UserCreateWithoutOrganizationInput, UserUncheckedCreateWithoutOrganizationInput> | UserCreateWithoutOrganizationInput[] | UserUncheckedCreateWithoutOrganizationInput[]
     connectOrCreate?: UserCreateOrConnectWithoutOrganizationInput | UserCreateOrConnectWithoutOrganizationInput[]
     createMany?: UserCreateManyOrganizationInputEnvelope
     connect?: UserWhereUniqueInput | UserWhereUniqueInput[]
-  }
-
-  export type InventorySectionUpdateManyWithoutOrganizationNestedInput = {
-    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
-    upsert?: InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput | InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput[]
-    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
-    set?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    disconnect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    delete?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    update?: InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput | InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput[]
-    updateMany?: InventorySectionUpdateManyWithWhereWithoutOrganizationInput | InventorySectionUpdateManyWithWhereWithoutOrganizationInput[]
-    deleteMany?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
   }
 
   export type InventoryItemUpdateManyWithoutOrganizationNestedInput = {
@@ -14161,6 +14176,20 @@ export namespace Prisma {
     deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
   }
 
+  export type InventorySectionUpdateManyWithoutOrganizationNestedInput = {
+    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
+    upsert?: InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput | InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput[]
+    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
+    set?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    disconnect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    delete?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    update?: InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput | InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput[]
+    updateMany?: InventorySectionUpdateManyWithWhereWithoutOrganizationInput | InventorySectionUpdateManyWithWhereWithoutOrganizationInput[]
+    deleteMany?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
+  }
+
   export type UserUpdateManyWithoutOrganizationNestedInput = {
     create?: XOR<UserCreateWithoutOrganizationInput, UserUncheckedCreateWithoutOrganizationInput> | UserCreateWithoutOrganizationInput[] | UserUncheckedCreateWithoutOrganizationInput[]
     connectOrCreate?: UserCreateOrConnectWithoutOrganizationInput | UserCreateOrConnectWithoutOrganizationInput[]
@@ -14173,20 +14202,6 @@ export namespace Prisma {
     update?: UserUpdateWithWhereUniqueWithoutOrganizationInput | UserUpdateWithWhereUniqueWithoutOrganizationInput[]
     updateMany?: UserUpdateManyWithWhereWithoutOrganizationInput | UserUpdateManyWithWhereWithoutOrganizationInput[]
     deleteMany?: UserScalarWhereInput | UserScalarWhereInput[]
-  }
-
-  export type InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput = {
-    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
-    upsert?: InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput | InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput[]
-    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
-    set?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    disconnect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    delete?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    update?: InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput | InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput[]
-    updateMany?: InventorySectionUpdateManyWithWhereWithoutOrganizationInput | InventorySectionUpdateManyWithWhereWithoutOrganizationInput[]
-    deleteMany?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
   }
 
   export type InventoryItemUncheckedUpdateManyWithoutOrganizationNestedInput = {
@@ -14203,6 +14218,20 @@ export namespace Prisma {
     deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
   }
 
+  export type InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput = {
+    create?: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput> | InventorySectionCreateWithoutOrganizationInput[] | InventorySectionUncheckedCreateWithoutOrganizationInput[]
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutOrganizationInput | InventorySectionCreateOrConnectWithoutOrganizationInput[]
+    upsert?: InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput | InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput[]
+    createMany?: InventorySectionCreateManyOrganizationInputEnvelope
+    set?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    disconnect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    delete?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    update?: InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput | InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput[]
+    updateMany?: InventorySectionUpdateManyWithWhereWithoutOrganizationInput | InventorySectionUpdateManyWithWhereWithoutOrganizationInput[]
+    deleteMany?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
+  }
+
   export type UserUncheckedUpdateManyWithoutOrganizationNestedInput = {
     create?: XOR<UserCreateWithoutOrganizationInput, UserUncheckedCreateWithoutOrganizationInput> | UserCreateWithoutOrganizationInput[] | UserUncheckedCreateWithoutOrganizationInput[]
     connectOrCreate?: UserCreateOrConnectWithoutOrganizationInput | UserCreateOrConnectWithoutOrganizationInput[]
@@ -14215,6 +14244,19 @@ export namespace Prisma {
     update?: UserUpdateWithWhereUniqueWithoutOrganizationInput | UserUpdateWithWhereUniqueWithoutOrganizationInput[]
     updateMany?: UserUpdateManyWithWhereWithoutOrganizationInput | UserUpdateManyWithWhereWithoutOrganizationInput[]
     deleteMany?: UserScalarWhereInput | UserScalarWhereInput[]
+  }
+
+  export type InventoryItemCreateNestedManyWithoutSectionInput = {
+    create?: XOR<InventoryItemCreateWithoutSectionInput, InventoryItemUncheckedCreateWithoutSectionInput> | InventoryItemCreateWithoutSectionInput[] | InventoryItemUncheckedCreateWithoutSectionInput[]
+    connectOrCreate?: InventoryItemCreateOrConnectWithoutSectionInput | InventoryItemCreateOrConnectWithoutSectionInput[]
+    createMany?: InventoryItemCreateManySectionInputEnvelope
+    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+  }
+
+  export type OrganizationCreateNestedOneWithoutSectionsInput = {
+    create?: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
+    connectOrCreate?: OrganizationCreateOrConnectWithoutSectionsInput
+    connect?: OrganizationWhereUniqueInput
   }
 
   export type InventorySectionCreateNestedOneWithoutChildrenInput = {
@@ -14230,13 +14272,7 @@ export namespace Prisma {
     connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
   }
 
-  export type OrganizationCreateNestedOneWithoutSectionsInput = {
-    create?: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
-    connectOrCreate?: OrganizationCreateOrConnectWithoutSectionsInput
-    connect?: OrganizationWhereUniqueInput
-  }
-
-  export type InventoryItemCreateNestedManyWithoutSectionInput = {
+  export type InventoryItemUncheckedCreateNestedManyWithoutSectionInput = {
     create?: XOR<InventoryItemCreateWithoutSectionInput, InventoryItemUncheckedCreateWithoutSectionInput> | InventoryItemCreateWithoutSectionInput[] | InventoryItemUncheckedCreateWithoutSectionInput[]
     connectOrCreate?: InventoryItemCreateOrConnectWithoutSectionInput | InventoryItemCreateOrConnectWithoutSectionInput[]
     createMany?: InventoryItemCreateManySectionInputEnvelope
@@ -14248,45 +14284,6 @@ export namespace Prisma {
     connectOrCreate?: InventorySectionCreateOrConnectWithoutParentInput | InventorySectionCreateOrConnectWithoutParentInput[]
     createMany?: InventorySectionCreateManyParentInputEnvelope
     connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-  }
-
-  export type InventoryItemUncheckedCreateNestedManyWithoutSectionInput = {
-    create?: XOR<InventoryItemCreateWithoutSectionInput, InventoryItemUncheckedCreateWithoutSectionInput> | InventoryItemCreateWithoutSectionInput[] | InventoryItemUncheckedCreateWithoutSectionInput[]
-    connectOrCreate?: InventoryItemCreateOrConnectWithoutSectionInput | InventoryItemCreateOrConnectWithoutSectionInput[]
-    createMany?: InventoryItemCreateManySectionInputEnvelope
-    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-  }
-
-  export type InventorySectionUpdateOneWithoutChildrenNestedInput = {
-    create?: XOR<InventorySectionCreateWithoutChildrenInput, InventorySectionUncheckedCreateWithoutChildrenInput>
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutChildrenInput
-    upsert?: InventorySectionUpsertWithoutChildrenInput
-    disconnect?: InventorySectionWhereInput | boolean
-    delete?: InventorySectionWhereInput | boolean
-    connect?: InventorySectionWhereUniqueInput
-    update?: XOR<XOR<InventorySectionUpdateToOneWithWhereWithoutChildrenInput, InventorySectionUpdateWithoutChildrenInput>, InventorySectionUncheckedUpdateWithoutChildrenInput>
-  }
-
-  export type InventorySectionUpdateManyWithoutParentNestedInput = {
-    create?: XOR<InventorySectionCreateWithoutParentInput, InventorySectionUncheckedCreateWithoutParentInput> | InventorySectionCreateWithoutParentInput[] | InventorySectionUncheckedCreateWithoutParentInput[]
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutParentInput | InventorySectionCreateOrConnectWithoutParentInput[]
-    upsert?: InventorySectionUpsertWithWhereUniqueWithoutParentInput | InventorySectionUpsertWithWhereUniqueWithoutParentInput[]
-    createMany?: InventorySectionCreateManyParentInputEnvelope
-    set?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    disconnect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    delete?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
-    update?: InventorySectionUpdateWithWhereUniqueWithoutParentInput | InventorySectionUpdateWithWhereUniqueWithoutParentInput[]
-    updateMany?: InventorySectionUpdateManyWithWhereWithoutParentInput | InventorySectionUpdateManyWithWhereWithoutParentInput[]
-    deleteMany?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
-  }
-
-  export type OrganizationUpdateOneRequiredWithoutSectionsNestedInput = {
-    create?: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
-    connectOrCreate?: OrganizationCreateOrConnectWithoutSectionsInput
-    upsert?: OrganizationUpsertWithoutSectionsInput
-    connect?: OrganizationWhereUniqueInput
-    update?: XOR<XOR<OrganizationUpdateToOneWithWhereWithoutSectionsInput, OrganizationUpdateWithoutSectionsInput>, OrganizationUncheckedUpdateWithoutSectionsInput>
   }
 
   export type InventoryItemUpdateManyWithoutSectionNestedInput = {
@@ -14303,7 +14300,25 @@ export namespace Prisma {
     deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
   }
 
-  export type InventorySectionUncheckedUpdateManyWithoutParentNestedInput = {
+  export type OrganizationUpdateOneRequiredWithoutSectionsNestedInput = {
+    create?: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
+    connectOrCreate?: OrganizationCreateOrConnectWithoutSectionsInput
+    upsert?: OrganizationUpsertWithoutSectionsInput
+    connect?: OrganizationWhereUniqueInput
+    update?: XOR<XOR<OrganizationUpdateToOneWithWhereWithoutSectionsInput, OrganizationUpdateWithoutSectionsInput>, OrganizationUncheckedUpdateWithoutSectionsInput>
+  }
+
+  export type InventorySectionUpdateOneWithoutChildrenNestedInput = {
+    create?: XOR<InventorySectionCreateWithoutChildrenInput, InventorySectionUncheckedCreateWithoutChildrenInput>
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutChildrenInput
+    upsert?: InventorySectionUpsertWithoutChildrenInput
+    disconnect?: InventorySectionWhereInput | boolean
+    delete?: InventorySectionWhereInput | boolean
+    connect?: InventorySectionWhereUniqueInput
+    update?: XOR<XOR<InventorySectionUpdateToOneWithWhereWithoutChildrenInput, InventorySectionUpdateWithoutChildrenInput>, InventorySectionUncheckedUpdateWithoutChildrenInput>
+  }
+
+  export type InventorySectionUpdateManyWithoutParentNestedInput = {
     create?: XOR<InventorySectionCreateWithoutParentInput, InventorySectionUncheckedCreateWithoutParentInput> | InventorySectionCreateWithoutParentInput[] | InventorySectionUncheckedCreateWithoutParentInput[]
     connectOrCreate?: InventorySectionCreateOrConnectWithoutParentInput | InventorySectionCreateOrConnectWithoutParentInput[]
     upsert?: InventorySectionUpsertWithWhereUniqueWithoutParentInput | InventorySectionUpsertWithWhereUniqueWithoutParentInput[]
@@ -14331,16 +14346,31 @@ export namespace Prisma {
     deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
   }
 
+  export type InventorySectionUncheckedUpdateManyWithoutParentNestedInput = {
+    create?: XOR<InventorySectionCreateWithoutParentInput, InventorySectionUncheckedCreateWithoutParentInput> | InventorySectionCreateWithoutParentInput[] | InventorySectionUncheckedCreateWithoutParentInput[]
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutParentInput | InventorySectionCreateOrConnectWithoutParentInput[]
+    upsert?: InventorySectionUpsertWithWhereUniqueWithoutParentInput | InventorySectionUpsertWithWhereUniqueWithoutParentInput[]
+    createMany?: InventorySectionCreateManyParentInputEnvelope
+    set?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    disconnect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    delete?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    connect?: InventorySectionWhereUniqueInput | InventorySectionWhereUniqueInput[]
+    update?: InventorySectionUpdateWithWhereUniqueWithoutParentInput | InventorySectionUpdateWithWhereUniqueWithoutParentInput[]
+    updateMany?: InventorySectionUpdateManyWithWhereWithoutParentInput | InventorySectionUpdateManyWithWhereWithoutParentInput[]
+    deleteMany?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
+  }
+
+  export type AuditLogCreateNestedManyWithoutItemInput = {
+    create?: XOR<AuditLogCreateWithoutItemInput, AuditLogUncheckedCreateWithoutItemInput> | AuditLogCreateWithoutItemInput[] | AuditLogUncheckedCreateWithoutItemInput[]
+    connectOrCreate?: AuditLogCreateOrConnectWithoutItemInput | AuditLogCreateOrConnectWithoutItemInput[]
+    createMany?: AuditLogCreateManyItemInputEnvelope
+    connect?: AuditLogWhereUniqueInput | AuditLogWhereUniqueInput[]
+  }
+
   export type UserCreateNestedOneWithoutCreatedItemsInput = {
     create?: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
     connectOrCreate?: UserCreateOrConnectWithoutCreatedItemsInput
     connect?: UserWhereUniqueInput
-  }
-
-  export type InventorySectionCreateNestedOneWithoutItemsInput = {
-    create?: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutItemsInput
-    connect?: InventorySectionWhereUniqueInput
   }
 
   export type OrganizationCreateNestedOneWithoutItemsInput = {
@@ -14349,11 +14379,10 @@ export namespace Prisma {
     connect?: OrganizationWhereUniqueInput
   }
 
-  export type AuditLogCreateNestedManyWithoutItemInput = {
-    create?: XOR<AuditLogCreateWithoutItemInput, AuditLogUncheckedCreateWithoutItemInput> | AuditLogCreateWithoutItemInput[] | AuditLogUncheckedCreateWithoutItemInput[]
-    connectOrCreate?: AuditLogCreateOrConnectWithoutItemInput | AuditLogCreateOrConnectWithoutItemInput[]
-    createMany?: AuditLogCreateManyItemInputEnvelope
-    connect?: AuditLogWhereUniqueInput | AuditLogWhereUniqueInput[]
+  export type InventorySectionCreateNestedOneWithoutItemsInput = {
+    create?: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutItemsInput
+    connect?: InventorySectionWhereUniqueInput
   }
 
   export type StockTransactionCreateNestedManyWithoutItemInput = {
@@ -14385,32 +14414,6 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type UserUpdateOneRequiredWithoutCreatedItemsNestedInput = {
-    create?: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutCreatedItemsInput
-    upsert?: UserUpsertWithoutCreatedItemsInput
-    connect?: UserWhereUniqueInput
-    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutCreatedItemsInput, UserUpdateWithoutCreatedItemsInput>, UserUncheckedUpdateWithoutCreatedItemsInput>
-  }
-
-  export type InventorySectionUpdateOneWithoutItemsNestedInput = {
-    create?: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
-    connectOrCreate?: InventorySectionCreateOrConnectWithoutItemsInput
-    upsert?: InventorySectionUpsertWithoutItemsInput
-    disconnect?: InventorySectionWhereInput | boolean
-    delete?: InventorySectionWhereInput | boolean
-    connect?: InventorySectionWhereUniqueInput
-    update?: XOR<XOR<InventorySectionUpdateToOneWithWhereWithoutItemsInput, InventorySectionUpdateWithoutItemsInput>, InventorySectionUncheckedUpdateWithoutItemsInput>
-  }
-
-  export type OrganizationUpdateOneRequiredWithoutItemsNestedInput = {
-    create?: XOR<OrganizationCreateWithoutItemsInput, OrganizationUncheckedCreateWithoutItemsInput>
-    connectOrCreate?: OrganizationCreateOrConnectWithoutItemsInput
-    upsert?: OrganizationUpsertWithoutItemsInput
-    connect?: OrganizationWhereUniqueInput
-    update?: XOR<XOR<OrganizationUpdateToOneWithWhereWithoutItemsInput, OrganizationUpdateWithoutItemsInput>, OrganizationUncheckedUpdateWithoutItemsInput>
-  }
-
   export type AuditLogUpdateManyWithoutItemNestedInput = {
     create?: XOR<AuditLogCreateWithoutItemInput, AuditLogUncheckedCreateWithoutItemInput> | AuditLogCreateWithoutItemInput[] | AuditLogUncheckedCreateWithoutItemInput[]
     connectOrCreate?: AuditLogCreateOrConnectWithoutItemInput | AuditLogCreateOrConnectWithoutItemInput[]
@@ -14423,6 +14426,32 @@ export namespace Prisma {
     update?: AuditLogUpdateWithWhereUniqueWithoutItemInput | AuditLogUpdateWithWhereUniqueWithoutItemInput[]
     updateMany?: AuditLogUpdateManyWithWhereWithoutItemInput | AuditLogUpdateManyWithWhereWithoutItemInput[]
     deleteMany?: AuditLogScalarWhereInput | AuditLogScalarWhereInput[]
+  }
+
+  export type UserUpdateOneRequiredWithoutCreatedItemsNestedInput = {
+    create?: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCreatedItemsInput
+    upsert?: UserUpsertWithoutCreatedItemsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutCreatedItemsInput, UserUpdateWithoutCreatedItemsInput>, UserUncheckedUpdateWithoutCreatedItemsInput>
+  }
+
+  export type OrganizationUpdateOneRequiredWithoutItemsNestedInput = {
+    create?: XOR<OrganizationCreateWithoutItemsInput, OrganizationUncheckedCreateWithoutItemsInput>
+    connectOrCreate?: OrganizationCreateOrConnectWithoutItemsInput
+    upsert?: OrganizationUpsertWithoutItemsInput
+    connect?: OrganizationWhereUniqueInput
+    update?: XOR<XOR<OrganizationUpdateToOneWithWhereWithoutItemsInput, OrganizationUpdateWithoutItemsInput>, OrganizationUncheckedUpdateWithoutItemsInput>
+  }
+
+  export type InventorySectionUpdateOneWithoutItemsNestedInput = {
+    create?: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
+    connectOrCreate?: InventorySectionCreateOrConnectWithoutItemsInput
+    upsert?: InventorySectionUpsertWithoutItemsInput
+    disconnect?: InventorySectionWhereInput | boolean
+    delete?: InventorySectionWhereInput | boolean
+    connect?: InventorySectionWhereUniqueInput
+    update?: XOR<XOR<InventorySectionUpdateToOneWithWhereWithoutItemsInput, InventorySectionUpdateWithoutItemsInput>, InventorySectionUncheckedUpdateWithoutItemsInput>
   }
 
   export type StockTransactionUpdateManyWithoutItemNestedInput = {
@@ -14467,24 +14496,18 @@ export namespace Prisma {
     deleteMany?: StockTransactionScalarWhereInput | StockTransactionScalarWhereInput[]
   }
 
-  export type InventoryItemCreateNestedManyWithoutCreatedByInput = {
-    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
-    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
-    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
-    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-  }
-
-  export type OrganizationCreateNestedOneWithoutUsersInput = {
-    create?: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
-    connectOrCreate?: OrganizationCreateOrConnectWithoutUsersInput
-    connect?: OrganizationWhereUniqueInput
-  }
-
   export type AccountCreateNestedManyWithoutUserInput = {
     create?: XOR<AccountCreateWithoutUserInput, AccountUncheckedCreateWithoutUserInput> | AccountCreateWithoutUserInput[] | AccountUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AccountCreateOrConnectWithoutUserInput | AccountCreateOrConnectWithoutUserInput[]
     createMany?: AccountCreateManyUserInputEnvelope
     connect?: AccountWhereUniqueInput | AccountWhereUniqueInput[]
+  }
+
+  export type InventoryItemCreateNestedManyWithoutCreatedByInput = {
+    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
+    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
+    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
+    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
   }
 
   export type SessionCreateNestedManyWithoutUserInput = {
@@ -14494,11 +14517,10 @@ export namespace Prisma {
     connect?: SessionWhereUniqueInput | SessionWhereUniqueInput[]
   }
 
-  export type InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput = {
-    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
-    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
-    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
-    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+  export type OrganizationCreateNestedOneWithoutUsersInput = {
+    create?: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
+    connectOrCreate?: OrganizationCreateOrConnectWithoutUsersInput
+    connect?: OrganizationWhereUniqueInput
   }
 
   export type AccountUncheckedCreateNestedManyWithoutUserInput = {
@@ -14508,6 +14530,13 @@ export namespace Prisma {
     connect?: AccountWhereUniqueInput | AccountWhereUniqueInput[]
   }
 
+  export type InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput = {
+    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
+    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
+    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
+    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+  }
+
   export type SessionUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<SessionCreateWithoutUserInput, SessionUncheckedCreateWithoutUserInput> | SessionCreateWithoutUserInput[] | SessionUncheckedCreateWithoutUserInput[]
     connectOrCreate?: SessionCreateOrConnectWithoutUserInput | SessionCreateOrConnectWithoutUserInput[]
@@ -14515,36 +14544,12 @@ export namespace Prisma {
     connect?: SessionWhereUniqueInput | SessionWhereUniqueInput[]
   }
 
-  export type NullableDateTimeFieldUpdateOperationsInput = {
-    set?: Date | string | null
-  }
-
   export type NullableEnumUserRoleFieldUpdateOperationsInput = {
     set?: $Enums.UserRole | null
   }
 
-  export type InventoryItemUpdateManyWithoutCreatedByNestedInput = {
-    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
-    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
-    upsert?: InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput | InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput[]
-    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
-    set?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    disconnect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    delete?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    update?: InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput | InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput[]
-    updateMany?: InventoryItemUpdateManyWithWhereWithoutCreatedByInput | InventoryItemUpdateManyWithWhereWithoutCreatedByInput[]
-    deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
-  }
-
-  export type OrganizationUpdateOneWithoutUsersNestedInput = {
-    create?: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
-    connectOrCreate?: OrganizationCreateOrConnectWithoutUsersInput
-    upsert?: OrganizationUpsertWithoutUsersInput
-    disconnect?: OrganizationWhereInput | boolean
-    delete?: OrganizationWhereInput | boolean
-    connect?: OrganizationWhereUniqueInput
-    update?: XOR<XOR<OrganizationUpdateToOneWithWhereWithoutUsersInput, OrganizationUpdateWithoutUsersInput>, OrganizationUncheckedUpdateWithoutUsersInput>
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
   }
 
   export type AccountUpdateManyWithoutUserNestedInput = {
@@ -14561,6 +14566,20 @@ export namespace Prisma {
     deleteMany?: AccountScalarWhereInput | AccountScalarWhereInput[]
   }
 
+  export type InventoryItemUpdateManyWithoutCreatedByNestedInput = {
+    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
+    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
+    upsert?: InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput | InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput[]
+    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
+    set?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    disconnect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    delete?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    update?: InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput | InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput[]
+    updateMany?: InventoryItemUpdateManyWithWhereWithoutCreatedByInput | InventoryItemUpdateManyWithWhereWithoutCreatedByInput[]
+    deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
+  }
+
   export type SessionUpdateManyWithoutUserNestedInput = {
     create?: XOR<SessionCreateWithoutUserInput, SessionUncheckedCreateWithoutUserInput> | SessionCreateWithoutUserInput[] | SessionUncheckedCreateWithoutUserInput[]
     connectOrCreate?: SessionCreateOrConnectWithoutUserInput | SessionCreateOrConnectWithoutUserInput[]
@@ -14575,18 +14594,14 @@ export namespace Prisma {
     deleteMany?: SessionScalarWhereInput | SessionScalarWhereInput[]
   }
 
-  export type InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput = {
-    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
-    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
-    upsert?: InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput | InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput[]
-    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
-    set?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    disconnect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    delete?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
-    update?: InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput | InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput[]
-    updateMany?: InventoryItemUpdateManyWithWhereWithoutCreatedByInput | InventoryItemUpdateManyWithWhereWithoutCreatedByInput[]
-    deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
+  export type OrganizationUpdateOneWithoutUsersNestedInput = {
+    create?: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
+    connectOrCreate?: OrganizationCreateOrConnectWithoutUsersInput
+    upsert?: OrganizationUpsertWithoutUsersInput
+    disconnect?: OrganizationWhereInput | boolean
+    delete?: OrganizationWhereInput | boolean
+    connect?: OrganizationWhereUniqueInput
+    update?: XOR<XOR<OrganizationUpdateToOneWithWhereWithoutUsersInput, OrganizationUpdateWithoutUsersInput>, OrganizationUncheckedUpdateWithoutUsersInput>
   }
 
   export type AccountUncheckedUpdateManyWithoutUserNestedInput = {
@@ -14601,6 +14616,20 @@ export namespace Prisma {
     update?: AccountUpdateWithWhereUniqueWithoutUserInput | AccountUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: AccountUpdateManyWithWhereWithoutUserInput | AccountUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: AccountScalarWhereInput | AccountScalarWhereInput[]
+  }
+
+  export type InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput = {
+    create?: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput> | InventoryItemCreateWithoutCreatedByInput[] | InventoryItemUncheckedCreateWithoutCreatedByInput[]
+    connectOrCreate?: InventoryItemCreateOrConnectWithoutCreatedByInput | InventoryItemCreateOrConnectWithoutCreatedByInput[]
+    upsert?: InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput | InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput[]
+    createMany?: InventoryItemCreateManyCreatedByInputEnvelope
+    set?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    disconnect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    delete?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    connect?: InventoryItemWhereUniqueInput | InventoryItemWhereUniqueInput[]
+    update?: InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput | InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput[]
+    updateMany?: InventoryItemUpdateManyWithWhereWithoutCreatedByInput | InventoryItemUpdateManyWithWhereWithoutCreatedByInput[]
+    deleteMany?: InventoryItemScalarWhereInput | InventoryItemScalarWhereInput[]
   }
 
   export type SessionUncheckedUpdateManyWithoutUserNestedInput = {
@@ -14816,6 +14845,13 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
+  export type NestedEnumUserRoleNullableFilter<$PrismaModel = never> = {
+    equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
+    in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
+    notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
+    not?: NestedEnumUserRoleNullableFilter<$PrismaModel> | $Enums.UserRole | null
+  }
+
   export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
@@ -14827,11 +14863,14 @@ export namespace Prisma {
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
-  export type NestedEnumUserRoleNullableFilter<$PrismaModel = never> = {
+  export type NestedEnumUserRoleNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
     in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
     notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    not?: NestedEnumUserRoleNullableFilter<$PrismaModel> | $Enums.UserRole | null
+    not?: NestedEnumUserRoleNullableWithAggregatesFilter<$PrismaModel> | $Enums.UserRole | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedEnumUserRoleNullableFilter<$PrismaModel>
+    _max?: NestedEnumUserRoleNullableFilter<$PrismaModel>
   }
 
   export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -14846,16 +14885,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type NestedEnumUserRoleNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserRole | EnumUserRoleFieldRefInput<$PrismaModel> | null
-    in?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    notIn?: $Enums.UserRole[] | ListEnumUserRoleFieldRefInput<$PrismaModel> | null
-    not?: NestedEnumUserRoleNullableWithAggregatesFilter<$PrismaModel> | $Enums.UserRole | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedEnumUserRoleNullableFilter<$PrismaModel>
-    _max?: NestedEnumUserRoleNullableFilter<$PrismaModel>
   }
 
   export type NestedEnumAuditActionFilter<$PrismaModel = never> = {
@@ -14895,29 +14924,29 @@ export namespace Prisma {
   export type UserCreateWithoutAccountsInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
     password?: string | null
-    image?: string | null
     role?: $Enums.UserRole | null
-    createdAt?: Date | string
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
+    createdAt?: Date | string
     createdItems?: InventoryItemCreateNestedManyWithoutCreatedByInput
-    organization?: OrganizationCreateNestedOneWithoutUsersInput
     sessions?: SessionCreateNestedManyWithoutUserInput
+    organization?: OrganizationCreateNestedOneWithoutUsersInput
   }
 
   export type UserUncheckedCreateWithoutAccountsInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
-    password?: string | null
-    image?: string | null
-    role?: $Enums.UserRole | null
     organizationId?: string | null
-    createdAt?: Date | string
+    password?: string | null
+    role?: $Enums.UserRole | null
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
+    createdAt?: Date | string
     createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
   }
@@ -14941,29 +14970,29 @@ export namespace Prisma {
   export type UserUpdateWithoutAccountsInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdItems?: InventoryItemUpdateManyWithoutCreatedByNestedInput
-    organization?: OrganizationUpdateOneWithoutUsersNestedInput
     sessions?: SessionUpdateManyWithoutUserNestedInput
+    organization?: OrganizationUpdateOneWithoutUsersNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAccountsInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
-    password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
-    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
     organizationId?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
   }
@@ -14971,31 +15000,31 @@ export namespace Prisma {
   export type UserCreateWithoutSessionsInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
     password?: string | null
-    image?: string | null
     role?: $Enums.UserRole | null
-    createdAt?: Date | string
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
+    createdAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
     createdItems?: InventoryItemCreateNestedManyWithoutCreatedByInput
     organization?: OrganizationCreateNestedOneWithoutUsersInput
-    accounts?: AccountCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutSessionsInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
-    password?: string | null
-    image?: string | null
-    role?: $Enums.UserRole | null
     organizationId?: string | null
-    createdAt?: Date | string
+    password?: string | null
+    role?: $Enums.UserRole | null
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
-    createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
+    createdAt?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
   }
 
   export type UserCreateOrConnectWithoutSessionsInput = {
@@ -15017,61 +15046,31 @@ export namespace Prisma {
   export type UserUpdateWithoutSessionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
     createdItems?: InventoryItemUpdateManyWithoutCreatedByNestedInput
     organization?: OrganizationUpdateOneWithoutUsersNestedInput
-    accounts?: AccountUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutSessionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
-    password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
-    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
     organizationId?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
-  }
-
-  export type InventorySectionCreateWithoutOrganizationInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parent?: InventorySectionCreateNestedOneWithoutChildrenInput
-    children?: InventorySectionCreateNestedManyWithoutParentInput
-    items?: InventoryItemCreateNestedManyWithoutSectionInput
-  }
-
-  export type InventorySectionUncheckedCreateWithoutOrganizationInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parentId?: string | null
-    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
-    items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
-  }
-
-  export type InventorySectionCreateOrConnectWithoutOrganizationInput = {
-    where: InventorySectionWhereUniqueInput
-    create: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput>
-  }
-
-  export type InventorySectionCreateManyOrganizationInputEnvelope = {
-    data: InventorySectionCreateManyOrganizationInput | InventorySectionCreateManyOrganizationInput[]
-    skipDuplicates?: boolean
+    createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
   }
 
   export type InventoryItemCreateWithoutOrganizationInput = {
@@ -15081,9 +15080,9 @@ export namespace Prisma {
     location: string
     sku: string
     createdAt?: Date | string
+    auditLogs?: AuditLogCreateNestedManyWithoutItemInput
     createdBy: UserCreateNestedOneWithoutCreatedItemsInput
     section?: InventorySectionCreateNestedOneWithoutItemsInput
-    auditLogs?: AuditLogCreateNestedManyWithoutItemInput
     transactions?: StockTransactionCreateNestedManyWithoutItemInput
   }
 
@@ -15110,33 +15109,63 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type InventorySectionCreateWithoutOrganizationInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    items?: InventoryItemCreateNestedManyWithoutSectionInput
+    parent?: InventorySectionCreateNestedOneWithoutChildrenInput
+    children?: InventorySectionCreateNestedManyWithoutParentInput
+  }
+
+  export type InventorySectionUncheckedCreateWithoutOrganizationInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    parentId?: string | null
+    items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
+    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
+  }
+
+  export type InventorySectionCreateOrConnectWithoutOrganizationInput = {
+    where: InventorySectionWhereUniqueInput
+    create: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput>
+  }
+
+  export type InventorySectionCreateManyOrganizationInputEnvelope = {
+    data: InventorySectionCreateManyOrganizationInput | InventorySectionCreateManyOrganizationInput[]
+    skipDuplicates?: boolean
+  }
+
   export type UserCreateWithoutOrganizationInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
     password?: string | null
-    image?: string | null
     role?: $Enums.UserRole | null
-    createdAt?: Date | string
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
-    createdItems?: InventoryItemCreateNestedManyWithoutCreatedByInput
+    createdAt?: Date | string
     accounts?: AccountCreateNestedManyWithoutUserInput
+    createdItems?: InventoryItemCreateNestedManyWithoutCreatedByInput
     sessions?: SessionCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutOrganizationInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
     password?: string | null
-    image?: string | null
     role?: $Enums.UserRole | null
-    createdAt?: Date | string
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
-    createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
+    createdAt?: Date | string
     accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    createdItems?: InventoryItemUncheckedCreateNestedManyWithoutCreatedByInput
     sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -15148,34 +15177,6 @@ export namespace Prisma {
   export type UserCreateManyOrganizationInputEnvelope = {
     data: UserCreateManyOrganizationInput | UserCreateManyOrganizationInput[]
     skipDuplicates?: boolean
-  }
-
-  export type InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput = {
-    where: InventorySectionWhereUniqueInput
-    update: XOR<InventorySectionUpdateWithoutOrganizationInput, InventorySectionUncheckedUpdateWithoutOrganizationInput>
-    create: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput>
-  }
-
-  export type InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput = {
-    where: InventorySectionWhereUniqueInput
-    data: XOR<InventorySectionUpdateWithoutOrganizationInput, InventorySectionUncheckedUpdateWithoutOrganizationInput>
-  }
-
-  export type InventorySectionUpdateManyWithWhereWithoutOrganizationInput = {
-    where: InventorySectionScalarWhereInput
-    data: XOR<InventorySectionUpdateManyMutationInput, InventorySectionUncheckedUpdateManyWithoutOrganizationInput>
-  }
-
-  export type InventorySectionScalarWhereInput = {
-    AND?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
-    OR?: InventorySectionScalarWhereInput[]
-    NOT?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
-    id?: StringFilter<"InventorySection"> | string
-    name?: StringFilter<"InventorySection"> | string
-    description?: StringNullableFilter<"InventorySection"> | string | null
-    createdAt?: DateTimeFilter<"InventorySection"> | Date | string
-    parentId?: StringNullableFilter<"InventorySection"> | string | null
-    organizationId?: StringFilter<"InventorySection"> | string
   }
 
   export type InventoryItemUpsertWithWhereUniqueWithoutOrganizationInput = {
@@ -15209,6 +15210,34 @@ export namespace Prisma {
     organizationId?: StringFilter<"InventoryItem"> | string
   }
 
+  export type InventorySectionUpsertWithWhereUniqueWithoutOrganizationInput = {
+    where: InventorySectionWhereUniqueInput
+    update: XOR<InventorySectionUpdateWithoutOrganizationInput, InventorySectionUncheckedUpdateWithoutOrganizationInput>
+    create: XOR<InventorySectionCreateWithoutOrganizationInput, InventorySectionUncheckedCreateWithoutOrganizationInput>
+  }
+
+  export type InventorySectionUpdateWithWhereUniqueWithoutOrganizationInput = {
+    where: InventorySectionWhereUniqueInput
+    data: XOR<InventorySectionUpdateWithoutOrganizationInput, InventorySectionUncheckedUpdateWithoutOrganizationInput>
+  }
+
+  export type InventorySectionUpdateManyWithWhereWithoutOrganizationInput = {
+    where: InventorySectionScalarWhereInput
+    data: XOR<InventorySectionUpdateManyMutationInput, InventorySectionUncheckedUpdateManyWithoutOrganizationInput>
+  }
+
+  export type InventorySectionScalarWhereInput = {
+    AND?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
+    OR?: InventorySectionScalarWhereInput[]
+    NOT?: InventorySectionScalarWhereInput | InventorySectionScalarWhereInput[]
+    id?: StringFilter<"InventorySection"> | string
+    name?: StringFilter<"InventorySection"> | string
+    description?: StringNullableFilter<"InventorySection"> | string | null
+    createdAt?: DateTimeFilter<"InventorySection"> | Date | string
+    parentId?: StringNullableFilter<"InventorySection"> | string | null
+    organizationId?: StringFilter<"InventorySection"> | string
+  }
+
   export type UserUpsertWithWhereUniqueWithoutOrganizationInput = {
     where: UserWhereUniqueInput
     update: XOR<UserUpdateWithoutOrganizationInput, UserUncheckedUpdateWithoutOrganizationInput>
@@ -15231,90 +15260,14 @@ export namespace Prisma {
     NOT?: UserScalarWhereInput | UserScalarWhereInput[]
     id?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
-    emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
     name?: StringFilter<"User"> | string
-    password?: StringNullableFilter<"User"> | string | null
-    image?: StringNullableFilter<"User"> | string | null
-    role?: EnumUserRoleNullableFilter<"User"> | $Enums.UserRole | null
     organizationId?: StringNullableFilter<"User"> | string | null
-    createdAt?: DateTimeFilter<"User"> | Date | string
+    password?: StringNullableFilter<"User"> | string | null
+    role?: EnumUserRoleNullableFilter<"User"> | $Enums.UserRole | null
+    emailVerified?: DateTimeNullableFilter<"User"> | Date | string | null
+    image?: StringNullableFilter<"User"> | string | null
     updatedAt?: DateTimeFilter<"User"> | Date | string
-  }
-
-  export type InventorySectionCreateWithoutChildrenInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parent?: InventorySectionCreateNestedOneWithoutChildrenInput
-    organization: OrganizationCreateNestedOneWithoutSectionsInput
-    items?: InventoryItemCreateNestedManyWithoutSectionInput
-  }
-
-  export type InventorySectionUncheckedCreateWithoutChildrenInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parentId?: string | null
-    organizationId: string
-    items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
-  }
-
-  export type InventorySectionCreateOrConnectWithoutChildrenInput = {
-    where: InventorySectionWhereUniqueInput
-    create: XOR<InventorySectionCreateWithoutChildrenInput, InventorySectionUncheckedCreateWithoutChildrenInput>
-  }
-
-  export type InventorySectionCreateWithoutParentInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    children?: InventorySectionCreateNestedManyWithoutParentInput
-    organization: OrganizationCreateNestedOneWithoutSectionsInput
-    items?: InventoryItemCreateNestedManyWithoutSectionInput
-  }
-
-  export type InventorySectionUncheckedCreateWithoutParentInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    organizationId: string
-    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
-    items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
-  }
-
-  export type InventorySectionCreateOrConnectWithoutParentInput = {
-    where: InventorySectionWhereUniqueInput
-    create: XOR<InventorySectionCreateWithoutParentInput, InventorySectionUncheckedCreateWithoutParentInput>
-  }
-
-  export type InventorySectionCreateManyParentInputEnvelope = {
-    data: InventorySectionCreateManyParentInput | InventorySectionCreateManyParentInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type OrganizationCreateWithoutSectionsInput = {
-    id?: string
-    name: string
-    createdAt?: Date | string
-    items?: InventoryItemCreateNestedManyWithoutOrganizationInput
-    users?: UserCreateNestedManyWithoutOrganizationInput
-  }
-
-  export type OrganizationUncheckedCreateWithoutSectionsInput = {
-    id?: string
-    name: string
-    createdAt?: Date | string
-    items?: InventoryItemUncheckedCreateNestedManyWithoutOrganizationInput
-    users?: UserUncheckedCreateNestedManyWithoutOrganizationInput
-  }
-
-  export type OrganizationCreateOrConnectWithoutSectionsInput = {
-    where: OrganizationWhereUniqueInput
-    create: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
+    createdAt?: DateTimeFilter<"User"> | Date | string
   }
 
   export type InventoryItemCreateWithoutSectionInput = {
@@ -15324,9 +15277,9 @@ export namespace Prisma {
     location: string
     sku: string
     createdAt?: Date | string
+    auditLogs?: AuditLogCreateNestedManyWithoutItemInput
     createdBy: UserCreateNestedOneWithoutCreatedItemsInput
     organization: OrganizationCreateNestedOneWithoutItemsInput
-    auditLogs?: AuditLogCreateNestedManyWithoutItemInput
     transactions?: StockTransactionCreateNestedManyWithoutItemInput
   }
 
@@ -15353,6 +15306,129 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type OrganizationCreateWithoutSectionsInput = {
+    id?: string
+    name: string
+    createdAt?: Date | string
+    organizationCode: string
+    items?: InventoryItemCreateNestedManyWithoutOrganizationInput
+    users?: UserCreateNestedManyWithoutOrganizationInput
+  }
+
+  export type OrganizationUncheckedCreateWithoutSectionsInput = {
+    id?: string
+    name: string
+    createdAt?: Date | string
+    organizationCode: string
+    items?: InventoryItemUncheckedCreateNestedManyWithoutOrganizationInput
+    users?: UserUncheckedCreateNestedManyWithoutOrganizationInput
+  }
+
+  export type OrganizationCreateOrConnectWithoutSectionsInput = {
+    where: OrganizationWhereUniqueInput
+    create: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
+  }
+
+  export type InventorySectionCreateWithoutChildrenInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    items?: InventoryItemCreateNestedManyWithoutSectionInput
+    organization: OrganizationCreateNestedOneWithoutSectionsInput
+    parent?: InventorySectionCreateNestedOneWithoutChildrenInput
+  }
+
+  export type InventorySectionUncheckedCreateWithoutChildrenInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    parentId?: string | null
+    organizationId: string
+    items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
+  }
+
+  export type InventorySectionCreateOrConnectWithoutChildrenInput = {
+    where: InventorySectionWhereUniqueInput
+    create: XOR<InventorySectionCreateWithoutChildrenInput, InventorySectionUncheckedCreateWithoutChildrenInput>
+  }
+
+  export type InventorySectionCreateWithoutParentInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    items?: InventoryItemCreateNestedManyWithoutSectionInput
+    organization: OrganizationCreateNestedOneWithoutSectionsInput
+    children?: InventorySectionCreateNestedManyWithoutParentInput
+  }
+
+  export type InventorySectionUncheckedCreateWithoutParentInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    organizationId: string
+    items?: InventoryItemUncheckedCreateNestedManyWithoutSectionInput
+    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
+  }
+
+  export type InventorySectionCreateOrConnectWithoutParentInput = {
+    where: InventorySectionWhereUniqueInput
+    create: XOR<InventorySectionCreateWithoutParentInput, InventorySectionUncheckedCreateWithoutParentInput>
+  }
+
+  export type InventorySectionCreateManyParentInputEnvelope = {
+    data: InventorySectionCreateManyParentInput | InventorySectionCreateManyParentInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type InventoryItemUpsertWithWhereUniqueWithoutSectionInput = {
+    where: InventoryItemWhereUniqueInput
+    update: XOR<InventoryItemUpdateWithoutSectionInput, InventoryItemUncheckedUpdateWithoutSectionInput>
+    create: XOR<InventoryItemCreateWithoutSectionInput, InventoryItemUncheckedCreateWithoutSectionInput>
+  }
+
+  export type InventoryItemUpdateWithWhereUniqueWithoutSectionInput = {
+    where: InventoryItemWhereUniqueInput
+    data: XOR<InventoryItemUpdateWithoutSectionInput, InventoryItemUncheckedUpdateWithoutSectionInput>
+  }
+
+  export type InventoryItemUpdateManyWithWhereWithoutSectionInput = {
+    where: InventoryItemScalarWhereInput
+    data: XOR<InventoryItemUpdateManyMutationInput, InventoryItemUncheckedUpdateManyWithoutSectionInput>
+  }
+
+  export type OrganizationUpsertWithoutSectionsInput = {
+    update: XOR<OrganizationUpdateWithoutSectionsInput, OrganizationUncheckedUpdateWithoutSectionsInput>
+    create: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
+    where?: OrganizationWhereInput
+  }
+
+  export type OrganizationUpdateToOneWithWhereWithoutSectionsInput = {
+    where?: OrganizationWhereInput
+    data: XOR<OrganizationUpdateWithoutSectionsInput, OrganizationUncheckedUpdateWithoutSectionsInput>
+  }
+
+  export type OrganizationUpdateWithoutSectionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
+    items?: InventoryItemUpdateManyWithoutOrganizationNestedInput
+    users?: UserUpdateManyWithoutOrganizationNestedInput
+  }
+
+  export type OrganizationUncheckedUpdateWithoutSectionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
+    items?: InventoryItemUncheckedUpdateManyWithoutOrganizationNestedInput
+    users?: UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  }
+
   export type InventorySectionUpsertWithoutChildrenInput = {
     update: XOR<InventorySectionUpdateWithoutChildrenInput, InventorySectionUncheckedUpdateWithoutChildrenInput>
     create: XOR<InventorySectionCreateWithoutChildrenInput, InventorySectionUncheckedCreateWithoutChildrenInput>
@@ -15369,9 +15445,9 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
     items?: InventoryItemUpdateManyWithoutSectionNestedInput
+    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
+    parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
   }
 
   export type InventorySectionUncheckedUpdateWithoutChildrenInput = {
@@ -15400,130 +15476,6 @@ export namespace Prisma {
     data: XOR<InventorySectionUpdateManyMutationInput, InventorySectionUncheckedUpdateManyWithoutParentInput>
   }
 
-  export type OrganizationUpsertWithoutSectionsInput = {
-    update: XOR<OrganizationUpdateWithoutSectionsInput, OrganizationUncheckedUpdateWithoutSectionsInput>
-    create: XOR<OrganizationCreateWithoutSectionsInput, OrganizationUncheckedCreateWithoutSectionsInput>
-    where?: OrganizationWhereInput
-  }
-
-  export type OrganizationUpdateToOneWithWhereWithoutSectionsInput = {
-    where?: OrganizationWhereInput
-    data: XOR<OrganizationUpdateWithoutSectionsInput, OrganizationUncheckedUpdateWithoutSectionsInput>
-  }
-
-  export type OrganizationUpdateWithoutSectionsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    items?: InventoryItemUpdateManyWithoutOrganizationNestedInput
-    users?: UserUpdateManyWithoutOrganizationNestedInput
-  }
-
-  export type OrganizationUncheckedUpdateWithoutSectionsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    items?: InventoryItemUncheckedUpdateManyWithoutOrganizationNestedInput
-    users?: UserUncheckedUpdateManyWithoutOrganizationNestedInput
-  }
-
-  export type InventoryItemUpsertWithWhereUniqueWithoutSectionInput = {
-    where: InventoryItemWhereUniqueInput
-    update: XOR<InventoryItemUpdateWithoutSectionInput, InventoryItemUncheckedUpdateWithoutSectionInput>
-    create: XOR<InventoryItemCreateWithoutSectionInput, InventoryItemUncheckedCreateWithoutSectionInput>
-  }
-
-  export type InventoryItemUpdateWithWhereUniqueWithoutSectionInput = {
-    where: InventoryItemWhereUniqueInput
-    data: XOR<InventoryItemUpdateWithoutSectionInput, InventoryItemUncheckedUpdateWithoutSectionInput>
-  }
-
-  export type InventoryItemUpdateManyWithWhereWithoutSectionInput = {
-    where: InventoryItemScalarWhereInput
-    data: XOR<InventoryItemUpdateManyMutationInput, InventoryItemUncheckedUpdateManyWithoutSectionInput>
-  }
-
-  export type UserCreateWithoutCreatedItemsInput = {
-    id?: string
-    email: string
-    emailVerified?: Date | string | null
-    name: string
-    password?: string | null
-    image?: string | null
-    role?: $Enums.UserRole | null
-    createdAt?: Date | string
-    updatedAt?: Date | string
-    organization?: OrganizationCreateNestedOneWithoutUsersInput
-    accounts?: AccountCreateNestedManyWithoutUserInput
-    sessions?: SessionCreateNestedManyWithoutUserInput
-  }
-
-  export type UserUncheckedCreateWithoutCreatedItemsInput = {
-    id?: string
-    email: string
-    emailVerified?: Date | string | null
-    name: string
-    password?: string | null
-    image?: string | null
-    role?: $Enums.UserRole | null
-    organizationId?: string | null
-    createdAt?: Date | string
-    updatedAt?: Date | string
-    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
-    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
-  }
-
-  export type UserCreateOrConnectWithoutCreatedItemsInput = {
-    where: UserWhereUniqueInput
-    create: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
-  }
-
-  export type InventorySectionCreateWithoutItemsInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parent?: InventorySectionCreateNestedOneWithoutChildrenInput
-    children?: InventorySectionCreateNestedManyWithoutParentInput
-    organization: OrganizationCreateNestedOneWithoutSectionsInput
-  }
-
-  export type InventorySectionUncheckedCreateWithoutItemsInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parentId?: string | null
-    organizationId: string
-    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
-  }
-
-  export type InventorySectionCreateOrConnectWithoutItemsInput = {
-    where: InventorySectionWhereUniqueInput
-    create: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
-  }
-
-  export type OrganizationCreateWithoutItemsInput = {
-    id?: string
-    name: string
-    createdAt?: Date | string
-    sections?: InventorySectionCreateNestedManyWithoutOrganizationInput
-    users?: UserCreateNestedManyWithoutOrganizationInput
-  }
-
-  export type OrganizationUncheckedCreateWithoutItemsInput = {
-    id?: string
-    name: string
-    createdAt?: Date | string
-    sections?: InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput
-    users?: UserUncheckedCreateNestedManyWithoutOrganizationInput
-  }
-
-  export type OrganizationCreateOrConnectWithoutItemsInput = {
-    where: OrganizationWhereUniqueInput
-    create: XOR<OrganizationCreateWithoutItemsInput, OrganizationUncheckedCreateWithoutItemsInput>
-  }
-
   export type AuditLogCreateWithoutItemInput = {
     id?: string
     action: $Enums.AuditAction
@@ -15548,6 +15500,89 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type UserCreateWithoutCreatedItemsInput = {
+    id?: string
+    email: string
+    name: string
+    password?: string | null
+    role?: $Enums.UserRole | null
+    emailVerified?: Date | string | null
+    image?: string | null
+    updatedAt?: Date | string
+    createdAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    organization?: OrganizationCreateNestedOneWithoutUsersInput
+  }
+
+  export type UserUncheckedCreateWithoutCreatedItemsInput = {
+    id?: string
+    email: string
+    name: string
+    organizationId?: string | null
+    password?: string | null
+    role?: $Enums.UserRole | null
+    emailVerified?: Date | string | null
+    image?: string | null
+    updatedAt?: Date | string
+    createdAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutCreatedItemsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
+  }
+
+  export type OrganizationCreateWithoutItemsInput = {
+    id?: string
+    name: string
+    createdAt?: Date | string
+    organizationCode: string
+    sections?: InventorySectionCreateNestedManyWithoutOrganizationInput
+    users?: UserCreateNestedManyWithoutOrganizationInput
+  }
+
+  export type OrganizationUncheckedCreateWithoutItemsInput = {
+    id?: string
+    name: string
+    createdAt?: Date | string
+    organizationCode: string
+    sections?: InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput
+    users?: UserUncheckedCreateNestedManyWithoutOrganizationInput
+  }
+
+  export type OrganizationCreateOrConnectWithoutItemsInput = {
+    where: OrganizationWhereUniqueInput
+    create: XOR<OrganizationCreateWithoutItemsInput, OrganizationUncheckedCreateWithoutItemsInput>
+  }
+
+  export type InventorySectionCreateWithoutItemsInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    organization: OrganizationCreateNestedOneWithoutSectionsInput
+    parent?: InventorySectionCreateNestedOneWithoutChildrenInput
+    children?: InventorySectionCreateNestedManyWithoutParentInput
+  }
+
+  export type InventorySectionUncheckedCreateWithoutItemsInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    parentId?: string | null
+    organizationId: string
+    children?: InventorySectionUncheckedCreateNestedManyWithoutParentInput
+  }
+
+  export type InventorySectionCreateOrConnectWithoutItemsInput = {
+    where: InventorySectionWhereUniqueInput
+    create: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
+  }
+
   export type StockTransactionCreateWithoutItemInput = {
     id?: string
     quantity: number
@@ -15570,105 +15605,6 @@ export namespace Prisma {
   export type StockTransactionCreateManyItemInputEnvelope = {
     data: StockTransactionCreateManyItemInput | StockTransactionCreateManyItemInput[]
     skipDuplicates?: boolean
-  }
-
-  export type UserUpsertWithoutCreatedItemsInput = {
-    update: XOR<UserUpdateWithoutCreatedItemsInput, UserUncheckedUpdateWithoutCreatedItemsInput>
-    create: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
-    where?: UserWhereInput
-  }
-
-  export type UserUpdateToOneWithWhereWithoutCreatedItemsInput = {
-    where?: UserWhereInput
-    data: XOR<UserUpdateWithoutCreatedItemsInput, UserUncheckedUpdateWithoutCreatedItemsInput>
-  }
-
-  export type UserUpdateWithoutCreatedItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
-    password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
-    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    organization?: OrganizationUpdateOneWithoutUsersNestedInput
-    accounts?: AccountUpdateManyWithoutUserNestedInput
-    sessions?: SessionUpdateManyWithoutUserNestedInput
-  }
-
-  export type UserUncheckedUpdateWithoutCreatedItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    name?: StringFieldUpdateOperationsInput | string
-    password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
-    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    organizationId?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
-    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
-  }
-
-  export type InventorySectionUpsertWithoutItemsInput = {
-    update: XOR<InventorySectionUpdateWithoutItemsInput, InventorySectionUncheckedUpdateWithoutItemsInput>
-    create: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
-    where?: InventorySectionWhereInput
-  }
-
-  export type InventorySectionUpdateToOneWithWhereWithoutItemsInput = {
-    where?: InventorySectionWhereInput
-    data: XOR<InventorySectionUpdateWithoutItemsInput, InventorySectionUncheckedUpdateWithoutItemsInput>
-  }
-
-  export type InventorySectionUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
-    children?: InventorySectionUpdateManyWithoutParentNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
-  }
-
-  export type InventorySectionUncheckedUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    parentId?: NullableStringFieldUpdateOperationsInput | string | null
-    organizationId?: StringFieldUpdateOperationsInput | string
-    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
-  }
-
-  export type OrganizationUpsertWithoutItemsInput = {
-    update: XOR<OrganizationUpdateWithoutItemsInput, OrganizationUncheckedUpdateWithoutItemsInput>
-    create: XOR<OrganizationCreateWithoutItemsInput, OrganizationUncheckedCreateWithoutItemsInput>
-    where?: OrganizationWhereInput
-  }
-
-  export type OrganizationUpdateToOneWithWhereWithoutItemsInput = {
-    where?: OrganizationWhereInput
-    data: XOR<OrganizationUpdateWithoutItemsInput, OrganizationUncheckedUpdateWithoutItemsInput>
-  }
-
-  export type OrganizationUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sections?: InventorySectionUpdateManyWithoutOrganizationNestedInput
-    users?: UserUpdateManyWithoutOrganizationNestedInput
-  }
-
-  export type OrganizationUncheckedUpdateWithoutItemsInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sections?: InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput
-    users?: UserUncheckedUpdateManyWithoutOrganizationNestedInput
   }
 
   export type AuditLogUpsertWithWhereUniqueWithoutItemInput = {
@@ -15698,6 +15634,107 @@ export namespace Prisma {
     timestamp?: DateTimeFilter<"AuditLog"> | Date | string
   }
 
+  export type UserUpsertWithoutCreatedItemsInput = {
+    update: XOR<UserUpdateWithoutCreatedItemsInput, UserUncheckedUpdateWithoutCreatedItemsInput>
+    create: XOR<UserCreateWithoutCreatedItemsInput, UserUncheckedCreateWithoutCreatedItemsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutCreatedItemsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutCreatedItemsInput, UserUncheckedUpdateWithoutCreatedItemsInput>
+  }
+
+  export type UserUpdateWithoutCreatedItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    organization?: OrganizationUpdateOneWithoutUsersNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutCreatedItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    organizationId?: NullableStringFieldUpdateOperationsInput | string | null
+    password?: NullableStringFieldUpdateOperationsInput | string | null
+    role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type OrganizationUpsertWithoutItemsInput = {
+    update: XOR<OrganizationUpdateWithoutItemsInput, OrganizationUncheckedUpdateWithoutItemsInput>
+    create: XOR<OrganizationCreateWithoutItemsInput, OrganizationUncheckedCreateWithoutItemsInput>
+    where?: OrganizationWhereInput
+  }
+
+  export type OrganizationUpdateToOneWithWhereWithoutItemsInput = {
+    where?: OrganizationWhereInput
+    data: XOR<OrganizationUpdateWithoutItemsInput, OrganizationUncheckedUpdateWithoutItemsInput>
+  }
+
+  export type OrganizationUpdateWithoutItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
+    sections?: InventorySectionUpdateManyWithoutOrganizationNestedInput
+    users?: UserUpdateManyWithoutOrganizationNestedInput
+  }
+
+  export type OrganizationUncheckedUpdateWithoutItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
+    sections?: InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput
+    users?: UserUncheckedUpdateManyWithoutOrganizationNestedInput
+  }
+
+  export type InventorySectionUpsertWithoutItemsInput = {
+    update: XOR<InventorySectionUpdateWithoutItemsInput, InventorySectionUncheckedUpdateWithoutItemsInput>
+    create: XOR<InventorySectionCreateWithoutItemsInput, InventorySectionUncheckedCreateWithoutItemsInput>
+    where?: InventorySectionWhereInput
+  }
+
+  export type InventorySectionUpdateToOneWithWhereWithoutItemsInput = {
+    where?: InventorySectionWhereInput
+    data: XOR<InventorySectionUpdateWithoutItemsInput, InventorySectionUncheckedUpdateWithoutItemsInput>
+  }
+
+  export type InventorySectionUpdateWithoutItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
+    parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
+    children?: InventorySectionUpdateManyWithoutParentNestedInput
+  }
+
+  export type InventorySectionUncheckedUpdateWithoutItemsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    parentId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationId?: StringFieldUpdateOperationsInput | string
+    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
+  }
+
   export type StockTransactionUpsertWithWhereUniqueWithoutItemInput = {
     where: StockTransactionWhereUniqueInput
     update: XOR<StockTransactionUpdateWithoutItemInput, StockTransactionUncheckedUpdateWithoutItemInput>
@@ -15723,63 +15760,6 @@ export namespace Prisma {
     quantity?: IntFilter<"StockTransaction"> | number
     type?: EnumTransactionTypeFilter<"StockTransaction"> | $Enums.TransactionType
     timestamp?: DateTimeFilter<"StockTransaction"> | Date | string
-  }
-
-  export type InventoryItemCreateWithoutCreatedByInput = {
-    id?: string
-    name: string
-    quantity: number
-    location: string
-    sku: string
-    createdAt?: Date | string
-    section?: InventorySectionCreateNestedOneWithoutItemsInput
-    organization: OrganizationCreateNestedOneWithoutItemsInput
-    auditLogs?: AuditLogCreateNestedManyWithoutItemInput
-    transactions?: StockTransactionCreateNestedManyWithoutItemInput
-  }
-
-  export type InventoryItemUncheckedCreateWithoutCreatedByInput = {
-    id?: string
-    name: string
-    quantity: number
-    location: string
-    sku: string
-    createdAt?: Date | string
-    sectionId?: string | null
-    organizationId: string
-    auditLogs?: AuditLogUncheckedCreateNestedManyWithoutItemInput
-    transactions?: StockTransactionUncheckedCreateNestedManyWithoutItemInput
-  }
-
-  export type InventoryItemCreateOrConnectWithoutCreatedByInput = {
-    where: InventoryItemWhereUniqueInput
-    create: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput>
-  }
-
-  export type InventoryItemCreateManyCreatedByInputEnvelope = {
-    data: InventoryItemCreateManyCreatedByInput | InventoryItemCreateManyCreatedByInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type OrganizationCreateWithoutUsersInput = {
-    id?: string
-    name: string
-    createdAt?: Date | string
-    sections?: InventorySectionCreateNestedManyWithoutOrganizationInput
-    items?: InventoryItemCreateNestedManyWithoutOrganizationInput
-  }
-
-  export type OrganizationUncheckedCreateWithoutUsersInput = {
-    id?: string
-    name: string
-    createdAt?: Date | string
-    sections?: InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput
-    items?: InventoryItemUncheckedCreateNestedManyWithoutOrganizationInput
-  }
-
-  export type OrganizationCreateOrConnectWithoutUsersInput = {
-    where: OrganizationWhereUniqueInput
-    create: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
   }
 
   export type AccountCreateWithoutUserInput = {
@@ -15822,16 +15802,52 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
-  export type SessionCreateWithoutUserInput = {
+  export type InventoryItemCreateWithoutCreatedByInput = {
     id?: string
+    name: string
+    quantity: number
+    location: string
+    sku: string
+    createdAt?: Date | string
+    auditLogs?: AuditLogCreateNestedManyWithoutItemInput
+    organization: OrganizationCreateNestedOneWithoutItemsInput
+    section?: InventorySectionCreateNestedOneWithoutItemsInput
+    transactions?: StockTransactionCreateNestedManyWithoutItemInput
+  }
+
+  export type InventoryItemUncheckedCreateWithoutCreatedByInput = {
+    id?: string
+    name: string
+    quantity: number
+    location: string
+    sku: string
+    createdAt?: Date | string
+    sectionId?: string | null
+    organizationId: string
+    auditLogs?: AuditLogUncheckedCreateNestedManyWithoutItemInput
+    transactions?: StockTransactionUncheckedCreateNestedManyWithoutItemInput
+  }
+
+  export type InventoryItemCreateOrConnectWithoutCreatedByInput = {
+    where: InventoryItemWhereUniqueInput
+    create: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput>
+  }
+
+  export type InventoryItemCreateManyCreatedByInputEnvelope = {
+    data: InventoryItemCreateManyCreatedByInput | InventoryItemCreateManyCreatedByInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type SessionCreateWithoutUserInput = {
     sessionToken: string
     expires: Date | string
+    id?: string
   }
 
   export type SessionUncheckedCreateWithoutUserInput = {
-    id?: string
     sessionToken: string
     expires: Date | string
+    id?: string
   }
 
   export type SessionCreateOrConnectWithoutUserInput = {
@@ -15844,47 +15860,27 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
-  export type InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput = {
-    where: InventoryItemWhereUniqueInput
-    update: XOR<InventoryItemUpdateWithoutCreatedByInput, InventoryItemUncheckedUpdateWithoutCreatedByInput>
-    create: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput>
+  export type OrganizationCreateWithoutUsersInput = {
+    id?: string
+    name: string
+    createdAt?: Date | string
+    organizationCode: string
+    items?: InventoryItemCreateNestedManyWithoutOrganizationInput
+    sections?: InventorySectionCreateNestedManyWithoutOrganizationInput
   }
 
-  export type InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput = {
-    where: InventoryItemWhereUniqueInput
-    data: XOR<InventoryItemUpdateWithoutCreatedByInput, InventoryItemUncheckedUpdateWithoutCreatedByInput>
+  export type OrganizationUncheckedCreateWithoutUsersInput = {
+    id?: string
+    name: string
+    createdAt?: Date | string
+    organizationCode: string
+    items?: InventoryItemUncheckedCreateNestedManyWithoutOrganizationInput
+    sections?: InventorySectionUncheckedCreateNestedManyWithoutOrganizationInput
   }
 
-  export type InventoryItemUpdateManyWithWhereWithoutCreatedByInput = {
-    where: InventoryItemScalarWhereInput
-    data: XOR<InventoryItemUpdateManyMutationInput, InventoryItemUncheckedUpdateManyWithoutCreatedByInput>
-  }
-
-  export type OrganizationUpsertWithoutUsersInput = {
-    update: XOR<OrganizationUpdateWithoutUsersInput, OrganizationUncheckedUpdateWithoutUsersInput>
+  export type OrganizationCreateOrConnectWithoutUsersInput = {
+    where: OrganizationWhereUniqueInput
     create: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
-    where?: OrganizationWhereInput
-  }
-
-  export type OrganizationUpdateToOneWithWhereWithoutUsersInput = {
-    where?: OrganizationWhereInput
-    data: XOR<OrganizationUpdateWithoutUsersInput, OrganizationUncheckedUpdateWithoutUsersInput>
-  }
-
-  export type OrganizationUpdateWithoutUsersInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sections?: InventorySectionUpdateManyWithoutOrganizationNestedInput
-    items?: InventoryItemUpdateManyWithoutOrganizationNestedInput
-  }
-
-  export type OrganizationUncheckedUpdateWithoutUsersInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sections?: InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput
-    items?: InventoryItemUncheckedUpdateManyWithoutOrganizationNestedInput
   }
 
   export type AccountUpsertWithWhereUniqueWithoutUserInput = {
@@ -15922,6 +15918,22 @@ export namespace Prisma {
     updatedAt?: DateTimeFilter<"Account"> | Date | string
   }
 
+  export type InventoryItemUpsertWithWhereUniqueWithoutCreatedByInput = {
+    where: InventoryItemWhereUniqueInput
+    update: XOR<InventoryItemUpdateWithoutCreatedByInput, InventoryItemUncheckedUpdateWithoutCreatedByInput>
+    create: XOR<InventoryItemCreateWithoutCreatedByInput, InventoryItemUncheckedCreateWithoutCreatedByInput>
+  }
+
+  export type InventoryItemUpdateWithWhereUniqueWithoutCreatedByInput = {
+    where: InventoryItemWhereUniqueInput
+    data: XOR<InventoryItemUpdateWithoutCreatedByInput, InventoryItemUncheckedUpdateWithoutCreatedByInput>
+  }
+
+  export type InventoryItemUpdateManyWithWhereWithoutCreatedByInput = {
+    where: InventoryItemScalarWhereInput
+    data: XOR<InventoryItemUpdateManyMutationInput, InventoryItemUncheckedUpdateManyWithoutCreatedByInput>
+  }
+
   export type SessionUpsertWithWhereUniqueWithoutUserInput = {
     where: SessionWhereUniqueInput
     update: XOR<SessionUpdateWithoutUserInput, SessionUncheckedUpdateWithoutUserInput>
@@ -15942,10 +15954,39 @@ export namespace Prisma {
     AND?: SessionScalarWhereInput | SessionScalarWhereInput[]
     OR?: SessionScalarWhereInput[]
     NOT?: SessionScalarWhereInput | SessionScalarWhereInput[]
-    id?: StringFilter<"Session"> | string
     sessionToken?: StringFilter<"Session"> | string
     userId?: StringFilter<"Session"> | string
     expires?: DateTimeFilter<"Session"> | Date | string
+    id?: StringFilter<"Session"> | string
+  }
+
+  export type OrganizationUpsertWithoutUsersInput = {
+    update: XOR<OrganizationUpdateWithoutUsersInput, OrganizationUncheckedUpdateWithoutUsersInput>
+    create: XOR<OrganizationCreateWithoutUsersInput, OrganizationUncheckedCreateWithoutUsersInput>
+    where?: OrganizationWhereInput
+  }
+
+  export type OrganizationUpdateToOneWithWhereWithoutUsersInput = {
+    where?: OrganizationWhereInput
+    data: XOR<OrganizationUpdateWithoutUsersInput, OrganizationUncheckedUpdateWithoutUsersInput>
+  }
+
+  export type OrganizationUpdateWithoutUsersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
+    items?: InventoryItemUpdateManyWithoutOrganizationNestedInput
+    sections?: InventorySectionUpdateManyWithoutOrganizationNestedInput
+  }
+
+  export type OrganizationUncheckedUpdateWithoutUsersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationCode?: StringFieldUpdateOperationsInput | string
+    items?: InventoryItemUncheckedUpdateManyWithoutOrganizationNestedInput
+    sections?: InventorySectionUncheckedUpdateManyWithoutOrganizationNestedInput
   }
 
   export type InventoryItemCreateWithoutAuditLogsInput = {
@@ -15956,8 +15997,8 @@ export namespace Prisma {
     sku: string
     createdAt?: Date | string
     createdBy: UserCreateNestedOneWithoutCreatedItemsInput
-    section?: InventorySectionCreateNestedOneWithoutItemsInput
     organization: OrganizationCreateNestedOneWithoutItemsInput
+    section?: InventorySectionCreateNestedOneWithoutItemsInput
     transactions?: StockTransactionCreateNestedManyWithoutItemInput
   }
 
@@ -15998,8 +16039,8 @@ export namespace Prisma {
     sku?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
-    section?: InventorySectionUpdateOneWithoutItemsNestedInput
     organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
+    section?: InventorySectionUpdateOneWithoutItemsNestedInput
     transactions?: StockTransactionUpdateManyWithoutItemNestedInput
   }
 
@@ -16023,10 +16064,10 @@ export namespace Prisma {
     location: string
     sku: string
     createdAt?: Date | string
-    createdBy: UserCreateNestedOneWithoutCreatedItemsInput
-    section?: InventorySectionCreateNestedOneWithoutItemsInput
-    organization: OrganizationCreateNestedOneWithoutItemsInput
     auditLogs?: AuditLogCreateNestedManyWithoutItemInput
+    createdBy: UserCreateNestedOneWithoutCreatedItemsInput
+    organization: OrganizationCreateNestedOneWithoutItemsInput
+    section?: InventorySectionCreateNestedOneWithoutItemsInput
   }
 
   export type InventoryItemUncheckedCreateWithoutTransactionsInput = {
@@ -16065,10 +16106,10 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
     sku?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
-    section?: InventorySectionUpdateOneWithoutItemsNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
     auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
+    createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
+    organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
+    section?: InventorySectionUpdateOneWithoutItemsNestedInput
   }
 
   export type InventoryItemUncheckedUpdateWithoutTransactionsInput = {
@@ -16084,14 +16125,6 @@ export namespace Prisma {
     auditLogs?: AuditLogUncheckedUpdateManyWithoutItemNestedInput
   }
 
-  export type InventorySectionCreateManyOrganizationInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    parentId?: string | null
-  }
-
   export type InventoryItemCreateManyOrganizationInput = {
     id?: string
     name: string
@@ -16103,44 +16136,24 @@ export namespace Prisma {
     sectionId?: string | null
   }
 
+  export type InventorySectionCreateManyOrganizationInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    parentId?: string | null
+  }
+
   export type UserCreateManyOrganizationInput = {
     id?: string
     email: string
-    emailVerified?: Date | string | null
     name: string
     password?: string | null
-    image?: string | null
     role?: $Enums.UserRole | null
-    createdAt?: Date | string
+    emailVerified?: Date | string | null
+    image?: string | null
     updatedAt?: Date | string
-  }
-
-  export type InventorySectionUpdateWithoutOrganizationInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
-    children?: InventorySectionUpdateManyWithoutParentNestedInput
-    items?: InventoryItemUpdateManyWithoutSectionNestedInput
-  }
-
-  export type InventorySectionUncheckedUpdateWithoutOrganizationInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    parentId?: NullableStringFieldUpdateOperationsInput | string | null
-    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
-    items?: InventoryItemUncheckedUpdateManyWithoutSectionNestedInput
-  }
-
-  export type InventorySectionUncheckedUpdateManyWithoutOrganizationInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    parentId?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: Date | string
   }
 
   export type InventoryItemUpdateWithoutOrganizationInput = {
@@ -16150,9 +16163,9 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
     sku?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
     createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
     section?: InventorySectionUpdateOneWithoutItemsNestedInput
-    auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
     transactions?: StockTransactionUpdateManyWithoutItemNestedInput
   }
 
@@ -16180,54 +16193,74 @@ export namespace Prisma {
     sectionId?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
+  export type InventorySectionUpdateWithoutOrganizationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    items?: InventoryItemUpdateManyWithoutSectionNestedInput
+    parent?: InventorySectionUpdateOneWithoutChildrenNestedInput
+    children?: InventorySectionUpdateManyWithoutParentNestedInput
+  }
+
+  export type InventorySectionUncheckedUpdateWithoutOrganizationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    parentId?: NullableStringFieldUpdateOperationsInput | string | null
+    items?: InventoryItemUncheckedUpdateManyWithoutSectionNestedInput
+    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
+  }
+
+  export type InventorySectionUncheckedUpdateManyWithoutOrganizationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    parentId?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
   export type UserUpdateWithoutOrganizationInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdItems?: InventoryItemUpdateManyWithoutCreatedByNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUpdateManyWithoutUserNestedInput
+    createdItems?: InventoryItemUpdateManyWithoutCreatedByNestedInput
     sessions?: SessionUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutOrganizationInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    createdItems?: InventoryItemUncheckedUpdateManyWithoutCreatedByNestedInput
     sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateManyWithoutOrganizationInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     name?: StringFieldUpdateOperationsInput | string
     password?: NullableStringFieldUpdateOperationsInput | string | null
-    image?: NullableStringFieldUpdateOperationsInput | string | null
     role?: NullableEnumUserRoleFieldUpdateOperationsInput | $Enums.UserRole | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-  }
-
-  export type InventorySectionCreateManyParentInput = {
-    id?: string
-    name: string
-    description?: string | null
-    createdAt?: Date | string
-    organizationId: string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type InventoryItemCreateManySectionInput = {
@@ -16241,32 +16274,12 @@ export namespace Prisma {
     organizationId: string
   }
 
-  export type InventorySectionUpdateWithoutParentInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    children?: InventorySectionUpdateManyWithoutParentNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
-    items?: InventoryItemUpdateManyWithoutSectionNestedInput
-  }
-
-  export type InventorySectionUncheckedUpdateWithoutParentInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    organizationId?: StringFieldUpdateOperationsInput | string
-    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
-    items?: InventoryItemUncheckedUpdateManyWithoutSectionNestedInput
-  }
-
-  export type InventorySectionUncheckedUpdateManyWithoutParentInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    organizationId?: StringFieldUpdateOperationsInput | string
+  export type InventorySectionCreateManyParentInput = {
+    id?: string
+    name: string
+    description?: string | null
+    createdAt?: Date | string
+    organizationId: string
   }
 
   export type InventoryItemUpdateWithoutSectionInput = {
@@ -16276,9 +16289,9 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
     sku?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
     createdBy?: UserUpdateOneRequiredWithoutCreatedItemsNestedInput
     organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
-    auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
     transactions?: StockTransactionUpdateManyWithoutItemNestedInput
   }
 
@@ -16303,6 +16316,34 @@ export namespace Prisma {
     sku?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     createdById?: StringFieldUpdateOperationsInput | string
+    organizationId?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type InventorySectionUpdateWithoutParentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    items?: InventoryItemUpdateManyWithoutSectionNestedInput
+    organization?: OrganizationUpdateOneRequiredWithoutSectionsNestedInput
+    children?: InventorySectionUpdateManyWithoutParentNestedInput
+  }
+
+  export type InventorySectionUncheckedUpdateWithoutParentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizationId?: StringFieldUpdateOperationsInput | string
+    items?: InventoryItemUncheckedUpdateManyWithoutSectionNestedInput
+    children?: InventorySectionUncheckedUpdateManyWithoutParentNestedInput
+  }
+
+  export type InventorySectionUncheckedUpdateManyWithoutParentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     organizationId?: StringFieldUpdateOperationsInput | string
   }
 
@@ -16362,17 +16403,6 @@ export namespace Prisma {
     timestamp?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type InventoryItemCreateManyCreatedByInput = {
-    id?: string
-    name: string
-    quantity: number
-    location: string
-    sku: string
-    createdAt?: Date | string
-    sectionId?: string | null
-    organizationId: string
-  }
-
   export type AccountCreateManyUserInput = {
     type: string
     provider: string
@@ -16388,47 +16418,21 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type SessionCreateManyUserInput = {
+  export type InventoryItemCreateManyCreatedByInput = {
     id?: string
+    name: string
+    quantity: number
+    location: string
+    sku: string
+    createdAt?: Date | string
+    sectionId?: string | null
+    organizationId: string
+  }
+
+  export type SessionCreateManyUserInput = {
     sessionToken: string
     expires: Date | string
-  }
-
-  export type InventoryItemUpdateWithoutCreatedByInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    quantity?: IntFieldUpdateOperationsInput | number
-    location?: StringFieldUpdateOperationsInput | string
-    sku?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    section?: InventorySectionUpdateOneWithoutItemsNestedInput
-    organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
-    auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
-    transactions?: StockTransactionUpdateManyWithoutItemNestedInput
-  }
-
-  export type InventoryItemUncheckedUpdateWithoutCreatedByInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    quantity?: IntFieldUpdateOperationsInput | number
-    location?: StringFieldUpdateOperationsInput | string
-    sku?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sectionId?: NullableStringFieldUpdateOperationsInput | string | null
-    organizationId?: StringFieldUpdateOperationsInput | string
-    auditLogs?: AuditLogUncheckedUpdateManyWithoutItemNestedInput
-    transactions?: StockTransactionUncheckedUpdateManyWithoutItemNestedInput
-  }
-
-  export type InventoryItemUncheckedUpdateManyWithoutCreatedByInput = {
-    id?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-    quantity?: IntFieldUpdateOperationsInput | number
-    location?: StringFieldUpdateOperationsInput | string
-    sku?: StringFieldUpdateOperationsInput | string
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sectionId?: NullableStringFieldUpdateOperationsInput | string | null
-    organizationId?: StringFieldUpdateOperationsInput | string
+    id?: string
   }
 
   export type AccountUpdateWithoutUserInput = {
@@ -16476,22 +16480,59 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type SessionUpdateWithoutUserInput = {
+  export type InventoryItemUpdateWithoutCreatedByInput = {
     id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    quantity?: IntFieldUpdateOperationsInput | number
+    location?: StringFieldUpdateOperationsInput | string
+    sku?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    auditLogs?: AuditLogUpdateManyWithoutItemNestedInput
+    organization?: OrganizationUpdateOneRequiredWithoutItemsNestedInput
+    section?: InventorySectionUpdateOneWithoutItemsNestedInput
+    transactions?: StockTransactionUpdateManyWithoutItemNestedInput
+  }
+
+  export type InventoryItemUncheckedUpdateWithoutCreatedByInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    quantity?: IntFieldUpdateOperationsInput | number
+    location?: StringFieldUpdateOperationsInput | string
+    sku?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sectionId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationId?: StringFieldUpdateOperationsInput | string
+    auditLogs?: AuditLogUncheckedUpdateManyWithoutItemNestedInput
+    transactions?: StockTransactionUncheckedUpdateManyWithoutItemNestedInput
+  }
+
+  export type InventoryItemUncheckedUpdateManyWithoutCreatedByInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    quantity?: IntFieldUpdateOperationsInput | number
+    location?: StringFieldUpdateOperationsInput | string
+    sku?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sectionId?: NullableStringFieldUpdateOperationsInput | string | null
+    organizationId?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type SessionUpdateWithoutUserInput = {
     sessionToken?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
   }
 
   export type SessionUncheckedUpdateWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
     sessionToken?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
   }
 
   export type SessionUncheckedUpdateManyWithoutUserInput = {
-    id?: StringFieldUpdateOperationsInput | string
     sessionToken?: StringFieldUpdateOperationsInput | string
     expires?: DateTimeFieldUpdateOperationsInput | Date | string
+    id?: StringFieldUpdateOperationsInput | string
   }
 
 
