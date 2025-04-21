@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { redirect } from 'next/navigation';
-import { useSession } from "next-auth/react"
-import { SessionProvider } from "next-auth/react"
 // import { useRouter } from "next/navigation";
 import CreateSectionModal from '@/components/CreateSectionModal';
+import { HomeIcon, LogOut, Plus, SettingsIcon } from "lucide-react";
+import { signOut } from "next-auth/react"
+import { FloatingDock } from "@/components/ui/floating-dock";
 
 export default function Dashboard() {
   const [sections, setSections] = useState([]);
@@ -26,14 +26,14 @@ export default function Dashboard() {
         setSections([]); // fallback
       }
     };
-  
+
     fetchSections();
   }, []);
 
-  
-const handleCreateSection = (newSection) => {
-  setSections([newSection, ...sections]);
-};
+
+  const handleCreateSection = (newSection) => {
+    setSections([newSection, ...sections]);
+  };
 
   //   if (isLoading) {
   //     return (
@@ -60,12 +60,30 @@ const handleCreateSection = (newSection) => {
             <h1 className="text-4xl font-bold text-white tracking-tight">
               Inventory Dashboard
             </h1>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-blue-500/25"
-            >
-              Create New Section
-            </button>
+            <div className='flex gap-4'>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-6 py-3 bg-[#1D2838] border  hover:bg-[#3c4b61] text-white rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-blue-500/25"
+              >
+                <div className='flex gap-2'>
+                  <Plus />
+
+                </div>
+
+              </button>
+
+              <button
+                onClick={() => signOut({ redirectTo: "/dashboard" })}
+                className="px-6 py-3 bg-red-400 hover:bg-red-500 text-white rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-red-500/25 "
+              >
+                <div className='flex gap-2'>
+                  <LogOut />
+
+                </div>
+
+              </button>
+            </div>
+
           </div>
 
           {/* Quick Stats */}
@@ -152,11 +170,17 @@ const handleCreateSection = (newSection) => {
           </div>
         </motion.div>
       </div>
-      
+
       <CreateSectionModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSubmit={handleCreateSection}
+      />
+      <FloatingDock
+        items={[
+          { title: "Home", icon: <HomeIcon />, href: "/" },
+          { title: "Settings", icon: <SettingsIcon />, href: "/settings" },
+        ]}
       />
     </div>
   );

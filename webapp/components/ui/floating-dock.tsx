@@ -37,12 +37,12 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("relative block md:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2 items-center"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -64,7 +64,7 @@ const FloatingDockMobile = ({
                 <a
                   href={item.href}
                   key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 shadow-lg dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
                 </a>
@@ -75,7 +75,7 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 shadow-lg dark:bg-neutral-800"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
@@ -96,7 +96,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4  bg-gray-50 px-4 w-1/5 rounded-4xl pb-3 md:flex dark:bg-neutral-900",
+        "hidden md:flex fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 h-16 items-end gap-4 bg-gray-50/80 backdrop-blur-md px-4 rounded-full pb-3 shadow-lg dark:bg-neutral-900/80",
         className,
       )}
     >

@@ -5,8 +5,17 @@ import { BackgroundBeams } from "@/components/ui/background-beams"
 import LampDemo from "@/components/ui/lamp"
 import { FloatingNav } from "../../components/ui/floating-navbar";
 import { Home, Info, Phone } from "lucide-react";
+import { useSession } from "next-auth/react"
+import { redirect } from "next/navigation"
 
 const LandingPage = () => {
+
+  const { data: session } = useSession()
+ 
+  if (session) {
+    redirect("/dashboard")
+
+  }
 
   const navItems = [
     {

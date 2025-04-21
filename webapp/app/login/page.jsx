@@ -8,12 +8,34 @@ import {
   IconBrandGoogle,
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import { Home, Info, Phone } from "lucide-react";
 
 
 
 export default function Login() {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/home",
+      icon: <Home size={16} />, // ✅ Now it's a JSX.Element
+    },
+    {
+      name: "About",
+      link: "/about",
+      icon: <Info size={16} />,
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+      icon: <Phone size={16} />,
+    },
+  ];
+  
   return (
     <div className="h-screen flex items-center justify-center bg-black text-white">
+                <FloatingNav navItems={navItems} />
+
       <div className="w-full max-w-sm space-y-6 text-center px-6">
 
         {/* Heading */}
