@@ -2,14 +2,14 @@ import { auth } from "@/auth";
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request, { params }: { params: { sectionid: string } }) {
+export async function POST(req: Request, context: { params: { sectionid: string } }) {
     const session = await auth();
     const userId = session?.user?.id;
     if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   
     const body = await req.json();
     const { type, ...data } = body;
-    const sectionId = params.sectionid;
+    const sectionId = context.params.sectionid;
   
     const user = await prisma.user.findFirst({
       where: { id: userId },
@@ -52,4 +52,3 @@ export async function POST(req: Request, { params }: { params: { sectionid: stri
       return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
     }
   }
-  
