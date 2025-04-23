@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,21 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "app/.next/types/**/*.ts", "app/home/layout.jsx", "app/templatapp/dashboard/layout.rsxyout.rsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "app/.next/types/**/*.ts",
+    "app/home/layout.jsx",
+    "app/templatapp/dashboard/layout.rsxyout.rsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+, "lib/prisma.js", "app/dashboard/Dashboard.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
