@@ -1,8 +1,8 @@
 import { auth } from "@/auth";
 import prisma from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
-export async function POST(req: Request, context: { params: { sectionid: string } }) {
+export async function POST(req: NextRequest, context: { params: { sectionid: string } }) {
     const session = await auth();
     const userId = session?.user?.id;
     if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -51,4 +51,4 @@ export async function POST(req: Request, context: { params: { sectionid: string 
       console.error('Error:', err);
       return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
     }
-  }
+}
