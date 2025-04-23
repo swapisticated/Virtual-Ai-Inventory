@@ -117,10 +117,40 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.AccountScalarFieldEnum = {
+  userId: 'userId',
+  type: 'type',
+  provider: 'provider',
+  providerAccountId: 'providerAccountId',
+  refresh_token: 'refresh_token',
+  access_token: 'access_token',
+  expires_at: 'expires_at',
+  token_type: 'token_type',
+  scope: 'scope',
+  id_token: 'id_token',
+  session_state: 'session_state',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.SessionScalarFieldEnum = {
+  sessionToken: 'sessionToken',
+  userId: 'userId',
+  expires: 'expires',
+  id: 'id'
+};
+
+exports.Prisma.VerificationTokenScalarFieldEnum = {
+  identifier: 'identifier',
+  token: 'token',
+  expires: 'expires'
+};
+
 exports.Prisma.OrganizationScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  organizationCode: 'organizationCode'
 };
 
 exports.Prisma.InventorySectionScalarFieldEnum = {
@@ -148,8 +178,13 @@ exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   email: 'email',
   name: 'name',
+  organizationId: 'organizationId',
+  password: 'password',
   role: 'role',
-  organizationId: 'organizationId'
+  emailVerified: 'emailVerified',
+  image: 'image',
+  updatedAt: 'updatedAt',
+  createdAt: 'createdAt'
 };
 
 exports.Prisma.AuditLogScalarFieldEnum = {
@@ -203,6 +238,9 @@ exports.TransactionType = exports.$Enums.TransactionType = {
 };
 
 exports.Prisma.ModelName = {
+  Account: 'Account',
+  Session: 'Session',
+  VerificationToken: 'VerificationToken',
   Organization: 'Organization',
   InventorySection: 'InventorySection',
   InventoryItem: 'InventoryItem',
