@@ -104,10 +104,11 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link
+                  {/* <Link
                     href={`/sections/${section.id}`}
                     className="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300"
-                  >
+                  > */}
+                  <div className="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300">
                     <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
                       {section.name}
                     </h3>
@@ -120,7 +121,8 @@ export default function Dashboard() {
                         View details →
                       </span>
                     </div>
-                  </Link>
+                  {/* </Link> */}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -137,10 +139,11 @@ export default function Dashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Link
+                  {/* <Link
                     href={`/sections/${section.id}`}
                     className="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300"
-                  >
+                  > */}
+                  <div className="group block bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:bg-gray-800 hover:border-blue-500/50 transition-all duration-300">
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
                       {section.name}
                     </h3>
@@ -150,7 +153,8 @@ export default function Dashboard() {
                         {section._count?.items || 0} items
                       </span>
                     </div>
-                  </Link>
+                  {/* </Link> */}
+                  </div>
                 </motion.div>
               ))}
             </div>
