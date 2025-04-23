@@ -28,7 +28,7 @@ export const FloatingNav = ({
     if (!isScrollable) return; // 👈 early exit if not scrollable
 
     if (typeof current === "number") {
-      let direction = current - scrollYProgress.getPrevious()!;
+      const direction = current - scrollYProgress.getPrevious()!;
       
       if (direction < 0) {
         setVisible(true); // ✅ Scroll up => Show navbar

@@ -28,7 +28,7 @@ export default function JoinOrganization() {
       } else {
         setError(data.error || 'Something went wrong!');
       }
-    } catch (error) {
+    } catch {
       setError('Failed to join organization.');
     }
   };
