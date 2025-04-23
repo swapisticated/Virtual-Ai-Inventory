@@ -36,14 +36,14 @@ export default function SectionDetailPage() {
             <h1 className="text-2xl font-bold">Section Details</h1>
             <h2 className="mt-4 text-xl">Subsections</h2>
             <ul className="mb-4">
-                {subsections.map((s: any) => (
+                {subsections.map((s: unknown) => (
                     <li key={s.id}>{s.name}</li>
                 ))}
             </ul>
 
             <h2 className="text-xl">Items</h2>
             <ul className="mb-4">
-                {items.map((i: any) => (
+                {items.map((i: unknown) => (
                     <li key={i.id}>{i.name}</li>
                 ))}
             </ul>

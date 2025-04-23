@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     let body;
     try {
         body = await req.json();
-    } catch (err) {
+    } catch {
         return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
     }
 
@@ -71,8 +71,7 @@ export async function GET() {
       });
   
       return NextResponse.json(sections);
-    } catch (err) {
-      console.error("Error fetching sections:", err);
+    } catch {
       return NextResponse.json({ error: "Failed to fetch sections" }, { status: 500 });
     }
   }

@@ -1,5 +1,5 @@
 "use client";
-import React, { JSX, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
@@ -8,8 +8,6 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import DarkModeToggle from '@/components/DarkModeToggle';
-
 
 export const FloatingNav = ({
   navItems,
@@ -83,7 +81,7 @@ export const FloatingNav = ({
         
         
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem, idx: number) => (
           <Link  prefetch={true}
             key={`link=${idx}`}
             href={navItem.link}
@@ -109,8 +107,6 @@ export const FloatingNav = ({
         </button>
         </Link>
         
-        {/* <DarkModeToggle /> */}
-
       </motion.div>
       )}
       

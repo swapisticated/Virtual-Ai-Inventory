@@ -3,7 +3,7 @@ import Dashboard from "./Dashboard";
 import { auth } from "@/auth"
 import { prisma } from "@/lib/prisma"
 import { redirect } from "next/navigation"
-import { Home, Info, Phone } from "lucide-react";
+// import { Home, Info, Phone } from "lucide-react"; // Removed unused imports
 
 
 export default async function  DashboardPage() {

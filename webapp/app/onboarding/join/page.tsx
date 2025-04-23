@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 export default function JoinOrganization() {
   const [orgCode, setOrgCode] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState(''); // Kept, as it's used in JSX
   const router = useRouter();
 
   const handleJoinOrganization = async () => {

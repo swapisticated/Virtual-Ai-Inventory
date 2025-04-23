@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import { NextResponse } from "next/server";
 
-export async function GET(_request: Request) {
+export async function GET() {
   console.log("🔍 Incoming GET request to /api/session");
 
   let session;
@@ -31,4 +31,3 @@ export async function GET(_request: Request) {
     session,
   });
 }
-
