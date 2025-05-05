@@ -12,7 +12,6 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 export default function Dashboard() {
   const [sections, setSections] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchSections = async () => {
@@ -34,18 +33,6 @@ export default function Dashboard() {
   const handleCreateSection = (newSection) => {
     setSections([newSection, ...sections]);
   };
-
-  //   if (isLoading) {
-  //     return (
-  //       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
-  //         <div className="flex flex-col items-center gap-4">
-  //           <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-  //           <p className="text-gray-400 text-lg font-medium">Loading sections...</p>
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
@@ -185,5 +172,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-
