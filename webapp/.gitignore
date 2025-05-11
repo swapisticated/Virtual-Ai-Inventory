@@ -40,8 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-<<<<<<< HEAD
 /prisma/node_modules
-=======
-/prisma/node_modules
->>>>>>> origin/pydev
+/app/generated/prisma
