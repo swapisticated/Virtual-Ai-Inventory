@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { PlusIcon, FolderIcon } from '@heroicons/react/24/outline';
+import { PlusIcon, FolderIcon, BackwardIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation';
 
 // Define types for our data
@@ -65,13 +65,24 @@ export default function SectionsPage() {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-2xl font-bold text-white">Inventory Sections</h1>
+        <div className='flex gap-4'>
+        <button
+          onClick={() => router.push("/dashboard")}
+          className="flex items-center gap-2 px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
+        >
+          <BackwardIcon className="w-5 h-5" />
+          Back
+        </button>
         <button
           onClick={() => setShowAddModal(true)}
           className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
+
           <PlusIcon className="w-5 h-5" />
           Add Section
         </button>
+        </div>
+     
       </div>
 
       {loading ? (

@@ -71,7 +71,7 @@ export default function Login() {
               Continue with Github
             </button>    </form>
 
-          <form
+          {/* <form
             action={async () => {
               "use server"
               await signOut()
@@ -81,7 +81,7 @@ export default function Login() {
             <Mail className="text-lg" />
             Signout
           </button>
-          </form>
+          </form> */}
       
         </div>
 

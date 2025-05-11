@@ -10,7 +10,7 @@ export async function GET(req: Request, { params }: { params: { sectionid: strin
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   
-  const sectionId = params.sectionid;
+  const sectionId = await params.sectionid;
   
   try {
     const subsections = await prisma.inventorySection.findMany({

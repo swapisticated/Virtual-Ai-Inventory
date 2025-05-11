@@ -47,10 +47,10 @@ model Organization {
   id               String             @id @default(uuid())
   name             String
   createdAt        DateTime           @default(now())
+  organizationCode String             @unique
   items            InventoryItem[]
   sections         InventorySection[]
   users            User[]
-  organizationCode String             @unique
 }
 
 model InventorySection {
